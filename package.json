@@ -21,5 +21,27 @@
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.3",
     "typescript": "4.3.2"
-  }
+  },
+  "name": "with-chakra-ui-typescript-app",
+  "description": "This example features how to use [chakra-ui](https://github.com/chakra-ui/chakra-ui) as the component library within a Next.js app with TypeScript.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielhangan/personal-website.git"
+  },
+  "keywords": [
+    "software",
+    "engineer",
+    "personal",
+    "website",
+    "portfolio",
+    "blog"
+  ],
+  "author": "Daniel Hangan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danielhangan/personal-website/issues"
+  },
+  "homepage": "https://github.com/danielhangan/personal-website#readme"
 }
