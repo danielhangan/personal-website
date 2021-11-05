@@ -12,9 +12,10 @@ export const Naviagation = () => {
     const { colorMode, toggleColorMode } = useColorMode()
     const isDark = colorMode === 'dark'
     const [ display, changeDisplay ] = useState('none')
+
     return (
-        <Flex m={7} pt={4} pb={8}>
-            <Stack direction="row" spacing={4} w="full" alignItems="flex-start">
+        <Flex m={7} pt={4} pb={8} alignItems="flex-start">
+            <Stack direction="row" spacing={4}>
                 <Button size="sm" variant="ghost">
                     <ChakraLink
                         href="/"
