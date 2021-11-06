@@ -1,12 +1,5 @@
 import {
   Link as ChakraLink,
-  Text,
-  Heading,
-  Code,
-  List,
-  ListIcon,
-  ListItem,
-  VStack
 } from '@chakra-ui/react'
 import { CheckCircleIcon, LinkIcon } from '@chakra-ui/icons'
 
@@ -18,13 +11,12 @@ import { Footer } from '../components/Footer'
 import { Naviagation } from '../components/Navigation'
 
 const Index = () => (
+  <>
   <Container>
     <Naviagation />
     <Main>
       <Hero />
     </Main>
-{/* public/images/profile.jpeg */}
-    {/* <Hero /> */}
 
     {/* <Main>
 
@@ -54,6 +46,7 @@ const Index = () => (
     </Footer>
     <CTA /> */}
   </Container>
+  </>
 )
 
 export default Index

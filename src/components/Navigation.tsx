@@ -1,9 +1,13 @@
-import { useState } from 'react'
 import { 
     useColorMode,
     Flex,
-    Stack,
     Button,
+    IconButton,
+    Switch,
+    HStack,
+    Collapse,
+    SlideFade,
+    useDisclosure,
     Link as ChakraLink
  } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
@@ -11,41 +15,135 @@ import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 export const Naviagation = () => {
     const { colorMode, toggleColorMode } = useColorMode()
     const isDark = colorMode === 'dark'
-    const [ display, changeDisplay ] = useState('none')
+    const { isOpen, onToggle } = useDisclosure()
 
     return (
-        <Flex m={7} pt={4} pb={8} alignItems="flex-start">
-            <Stack direction="row" spacing={4}>
-                <Button size="sm" variant="ghost">
-                    <ChakraLink
-                        href="/"
-                        flexGrow={3}
-                        mx={2}
-                    >
-                        Home
-                    </ChakraLink>
-                </Button>
+        <HStack justify="center">
 
-                <Button size="sm" variant="ghost">
-                    <ChakraLink
-                        href="/about"
-                        flexGrow={3}
-                        mx={2}
-                    >
-                        About
-                    </ChakraLink>
-                </Button>
+        {/* Desktop */}
+        <Flex 
+            w={{base:'2xl', md:'3xl'}} 
+            alignItems="center" 
+            justifyContent="space-between"
+            pt={4}
+            pb={8}
+        >
+                <Flex display={['none', 'none', 'flex', 'flex' ]}>
+                        <ChakraLink href="/" m={4} ml={0}>
+                            <Button
+                                variant="ghost"
+                                aria-label="Home"
+                                p={4}
+                                w="100%"
+                                >
+                                Home
+                            </Button>
+                        </ChakraLink>
 
-                <Button size="sm" variant="ghost">
-                    <ChakraLink
-                        href="/contact"
-                        flexGrow={3}
-                        mx={2}
-                    >
-                        Contact
+                        <ChakraLink href="/about" m={4}>
+                            <Button
+                                variant="ghost"
+                                aria-label="Home"
+                                p={4}
+                                w="100%"
+                                >
+                                About
+                            </Button>
+                        </ChakraLink>
+
+                        <ChakraLink href="/contact" m={4}>
+                            <Button
+                                variant="ghost"
+                                aria-label="Home"
+                                p={4}
+                                w="100%"
+                                >
+                                Contact
+                            </Button>
+                        </ChakraLink>
+                </Flex>
+                <IconButton
+                    aria-label="Open Menu"
+                    mr={4}
+                    icon={<HamburgerIcon />}
+                    display={['flex', 'flex', 'none', 'none']}
+                    onClick={onToggle}
+                    />
+                <Switch 
+                    color="green"
+                    isChecked={isDark}
+                    onChange={toggleColorMode}
+                    />
+            </Flex>
+
+            {/* Mobile */}
+            <Collapse in={isOpen} animateOpacity>
+            <Flex
+                w="100vw"
+                h="100vh"
+                bgColor="gray.50"
+                zIndex={20}
+                pos="fixed"
+                top="0"
+                left="2"
+                overflowY="auto"
+                flexDir="column"
+            >
+                <Flex justify="flex-start" p={4}>
+                    <IconButton
+                        aria-label="Close Menu"
+                        icon={
+                            <CloseIcon />
+                        }
+                        onClick={onToggle}
+                    />
+                </Flex>
+                <Flex
+                    flexDir="column"
+                    align="flex-start"
+                    p={4}
+                >
+                    <ChakraLink href="/">
+                        <Button
+                            justifyContent="flex-start"
+                            variant="ghost"
+                            aria-label="Home"
+                            p={2}
+                            my={2}
+                            w="100vw"
+                        >
+                           Home
+                        </Button>
                     </ChakraLink>
-                </Button>
-            </Stack>
-        </Flex>
+
+                    <ChakraLink href="/about">
+                        <Button
+                            justifyContent="flex-start"
+                            variant="ghost"
+                            aria-label="sHome"
+                            p={2} 
+                            my={2}
+                            w="100vw"
+                        >
+                            About
+                        </Button>
+                    </ChakraLink>
+
+                    <ChakraLink href="/contact">
+                        <Button
+                            justifyContent="flex-start"
+                            variant="ghost"
+                            aria-label="Home"
+                            p={2}
+                            my={2}
+                            w="100vw"
+                        >
+                            Contact
+                        </Button>
+                    </ChakraLink>
+                </Flex> 
+            </Flex>
+            </Collapse>
+        </HStack>
     )
 } 

@@ -5,8 +5,6 @@ import {
   Image,
   Flex,
   Box,
-  Spacer,
-  Center
 } from '@chakra-ui/react'
 
 
@@ -27,28 +25,28 @@ export const Hero = ({
       <Flex
         direction={{base:'column-reverse', md:'row'}}
         alignItems="flex-start"
-        // px={[4,0,0]}
+        justifyContent="space-between"
+        w={{base: 'auto', md:'3xl'}}
       >
-        <Box w={{base: 'auto', md:'75%'}} p="4">
+        <Box w={{base: 'auto', md:'75%'}} p="3">
           <VStack alignItems="flex-start" fontSize="md">
             <Heading size="xl">{name}</Heading>
-            <Text>
-              {job_title} at {company}
-            </Text> 
-            <Text>
+              <Text color="brand.gray600">
+              {job_title} at <b>{company}</b>
+            </Text>
+            <Text color="brand.gray600">
               {description}
             </Text> 
           </VStack>
         </Box>
-        <Spacer />
-        <Center w={{base: 'auto', md:'25%'}} p="4">
-          <Image 
-            src="/images/profile.jpeg" 
-            alt="Daniel Hangan" 
-            boxSize={[100,100,150]}
-            borderRadius="full"
-            />
-        </Center>
+        <Image
+          ml={4}
+          w={{base: 'auto', md:'25%'}}
+          src="/images/profile.jpeg" 
+          alt="Daniel Hangan" 
+          boxSize={[100,100,150]}
+          borderRadius="full"
+          />
       </Flex>
   )
 }
