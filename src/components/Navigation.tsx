@@ -6,7 +6,6 @@ import {
     Switch,
     HStack,
     Collapse,
-    SlideFade,
     useDisclosure,
     Link as ChakraLink
  } from '@chakra-ui/react'
