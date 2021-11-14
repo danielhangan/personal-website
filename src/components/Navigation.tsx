@@ -9,6 +9,7 @@ import {
     useDisclosure,
     Link as ChakraLink
  } from '@chakra-ui/react'
+import Link from 'next/link'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 
 export const Naviagation = () => {
@@ -28,38 +29,45 @@ export const Naviagation = () => {
             pb={8}
         >
                 <Flex display={['none', 'none', 'flex', 'flex' ]}>
-                        <ChakraLink href="/" m={4} ml={0}>
+                        <Link href="/">
                             <Button
-                                variant="ghost"
-                                aria-label="Home"
+                                m={4}
+                                ml={0}
                                 p={4}
+                                aria-label="Home"
                                 w="100%"
+                                color="brand.gray600"
+                                fontWeight="lighter"
                                 >
                                 Home
                             </Button>
-                        </ChakraLink>
+                        </Link>
 
-                        <ChakraLink href="/about" m={4}>
+                        <Link href="/posts">
                             <Button
-                                variant="ghost"
-                                aria-label="Home"
+                                m={4}
                                 p={4}
+                                aria-label="Blog"
                                 w="100%"
+                                color="brand.gray600"
+                                fontWeight="lighter"
                                 >
-                                About
+                                Blog
                             </Button>
-                        </ChakraLink>
+                        </Link>
 
-                        <ChakraLink href="/contact" m={4}>
+                        <Link href="/resume">
                             <Button
-                                variant="ghost"
-                                aria-label="Home"
+                                m={4}
                                 p={4}
+                                aria-label="Resume"
                                 w="100%"
+                                color="brand.gray600"
+                                fontWeight="lighter"
                                 >
-                                Contact
+                                Resume
                             </Button>
-                        </ChakraLink>
+                        </Link>
                 </Flex>
                 <IconButton
                     aria-label="Open Menu"
@@ -102,44 +110,47 @@ export const Naviagation = () => {
                     align="flex-start"
                     p={4}
                 >
-                    <ChakraLink href="/">
+                    <Link href="/">
                         <Button
                             justifyContent="flex-start"
-                            variant="ghost"
                             aria-label="Home"
                             p={2}
                             my={2}
                             w="100vw"
+                            color="brand.gray600"
+                            fontWeight="lighter"
                         >
                            Home
                         </Button>
-                    </ChakraLink>
+                    </Link>
 
-                    <ChakraLink href="/about">
+                    <Link href="/about">
                         <Button
                             justifyContent="flex-start"
-                            variant="ghost"
                             aria-label="sHome"
                             p={2} 
                             my={2}
                             w="100vw"
+                            color="brand.gray600"
+                            fontWeight="lighter"
                         >
                             About
                         </Button>
-                    </ChakraLink>
+                    </Link>
 
-                    <ChakraLink href="/contact">
+                    <Link href="/contact">
                         <Button
                             justifyContent="flex-start"
-                            variant="ghost"
                             aria-label="Home"
                             p={2}
                             my={2}
                             w="100vw"
+                            color="brand.gray600"
+                            fontWeight="lighter"
                         >
                             Contact
                         </Button>
-                    </ChakraLink>
+                    </Link>
                 </Flex> 
             </Flex>
             </Collapse>

@@ -1,21 +1,14 @@
 import { useState } from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
-import useSWR from 'swr';
-import { GraphQLClient, gql } from 'graphql-request';
-import { serialize } from 'next-mdx-remote/serialize';
 import { MDXRemote } from 'next-mdx-remote';
 import { Main } from '../../components/Main';
+import { getAllPostsSlugs, getPostData } from '../../../lib/posts';
 
 
 import {
     Heading,
-    useColorMode,
-    Flex,
-    VStack,
-    Link as ChakraLink
 } from '@chakra-ui/react'
 
-const client = new GraphQLClient(process.env.NEXT_GRAPHCMS_URL);
 
 interface IPost {
     id: string,
@@ -42,60 +35,20 @@ export default function Post({ post } : {post: IPost}) {
 }
 
 export const getStaticProps: GetStaticProps = async ( {params} ) => {
-    const slug = params.slug as string;
-    
-    const query = gql`
-        query Post($slug: String!) {
-            post(where: { slug: $slug }) {
-                id
-                slug
-                title
-                description
-                text
-                date
-                image {
-                    url
-                }
-            }
-        }
-    `
-
-    const data: { post: IPost | null } = await client.request(query, { slug });
-
-    if (!data.post) {
-        return {
-            notFound: true,
-        };
-    }
-
-    const source = await serialize(data.post.text);
+    const postData = await getPostData(params.slug as string)
 
     return {
-        props: {post: { ...data.post, source }},
+        props: postData,
         revalidate: 60 * 60
     }
 }
 
 
 export const getStaticPaths: GetStaticPaths = async () => {
-    const query = gql`
-        query Posts {
-            posts {
-               slug 
-            }
-        }
- 
-    `
-    const data = await client.request(query);
-
-    const paths = data.posts.map(post => ({
-        params: {
-            slug: post.slug,
-        },
-    }))
+    const paths = await getAllPostsSlugs()
 
     return {
         paths,
         fallback: "blocking",
-    };
-};
+    }
+}

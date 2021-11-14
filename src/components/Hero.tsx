@@ -8,7 +8,6 @@ import {
 } from '@chakra-ui/react'
 
 
-
 export const Hero = ({ 
   name,
   job_title,
