@@ -15,6 +15,9 @@ import Link from 'next/link'
 import { Main } from '../../components/Main'
 
 
+// TODO: check out useSWR for data fecthing (highly recommended by NextJS team)
+
+
 export default function AllPosts({ allposts }) {
 
     return (
@@ -31,7 +34,7 @@ export default function AllPosts({ allposts }) {
                         <Heading size="xl" mb={4}>Blog</Heading>
                         <Text color="brand.gray600">
                             I have been writing casually about programming, health and productivity.
-                            You can find more articles on my <ChakraLink fontWeight="bold" href="https://danielhangan.medium.com/">
+                            You can find more articles on my <ChakraLink fontWeight="bold" href="https://danielhangan.medium.com/" passHref>
                                  medium page.
                             </ChakraLink>
                         </Text>

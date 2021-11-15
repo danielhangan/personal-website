@@ -1,12 +1,16 @@
 import { useState } from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
-import { MDXRemote } from 'next-mdx-remote';
-import { Main } from '../../components/Main';
 import { getAllPostsSlugs, getPostData } from '../../../lib/posts';
+import { MDXRemote } from 'next-mdx-remote';
+import ChakraUIRenderer from 'chakra-ui-markdown-renderer';
+import { Main } from '../../components/Main';
+import HeaderLayout from '../../layouts/Header';
 
 
 import {
     Heading,
+    Text,
+    Code,
 } from '@chakra-ui/react'
 
 
@@ -24,14 +28,16 @@ interface IPost {
 }
 
 export default function Post({ post } : {post: IPost}) {
-    return <Main>
-        <Heading as="h1">{post.title}</Heading>
-        <Heading as="h4" size="md">{post.description}</Heading>
-        <p>{post.date}</p>
-        <div>
-            <MDXRemote {...post.source} />
-        </div>
-    </Main>
+    return (
+    <HeaderLayout frontMatter={post}>
+        <Text>
+            <MDXRemote 
+                components={ChakraUIRenderer()} 
+                {...post.source}
+            />
+        </Text>
+    </HeaderLayout>
+    )
 }
 
 export const getStaticProps: GetStaticProps = async ( {params} ) => {

@@ -31,7 +31,7 @@ export const Naviagation = () => {
                 <Flex display={['none', 'none', 'flex', 'flex' ]}>
                         <Link href="/">
                             <Button
-                                m={4}
+                                m={2}
                                 ml={0}
                                 p={4}
                                 aria-label="Home"
@@ -45,7 +45,7 @@ export const Naviagation = () => {
 
                         <Link href="/posts">
                             <Button
-                                m={4}
+                                m={2}
                                 p={4}
                                 aria-label="Blog"
                                 w="100%"
@@ -56,9 +56,22 @@ export const Naviagation = () => {
                             </Button>
                         </Link>
 
+                        <Link href="/projects">
+                            <Button
+                                m={2}
+                                p={4}
+                                aria-label="Projects"
+                                w="100%"
+                                color="brand.gray600"
+                                fontWeight="lighter"
+                                >
+                                Projects
+                            </Button>
+                        </Link>
+
                         <Link href="/resume">
                             <Button
-                                m={4}
+                                m={2}
                                 p={4}
                                 aria-label="Resume"
                                 w="100%"
@@ -66,6 +79,19 @@ export const Naviagation = () => {
                                 fontWeight="lighter"
                                 >
                                 Resume
+                            </Button>
+                        </Link>
+
+                        <Link href="/contact">
+                            <Button
+                                m={2}
+                                p={4}
+                                aria-label="Contact"
+                                w="100%"
+                                color="brand.gray600"
+                                fontWeight="lighter"
+                                >
+                                Contact
                             </Button>
                         </Link>
                 </Flex>
@@ -116,7 +142,7 @@ export const Naviagation = () => {
                             aria-label="Home"
                             p={2}
                             my={2}
-                            w="100vw"
+                            w="100%"
                             color="brand.gray600"
                             fontWeight="lighter"
                         >
@@ -124,33 +150,62 @@ export const Naviagation = () => {
                         </Button>
                     </Link>
 
-                    <Link href="/about">
+                    <Link href="/posts">
                         <Button
                             justifyContent="flex-start"
-                            aria-label="sHome"
+                            aria-label="Blog"
                             p={2} 
                             my={2}
-                            w="100vw"
+                            w="100%"
                             color="brand.gray600"
                             fontWeight="lighter"
                         >
-                            About
+                            Blog
+                        </Button>
+                    </Link>
+
+                    <Link href="/projects">
+                        <Button
+                            justifyContent="flex-start"
+                            aria-label="projects"
+                            p={2}
+                            my={2}
+                            w="100%"
+                            color="brand.gray600"
+                            fontWeight="lighter"
+                        >
+                            Projects
+                        </Button>
+                    </Link>
+
+                    <Link href="/resume">
+                        <Button
+                            justifyContent="flex-start"
+                            aria-label="Resume"
+                            p={2}
+                            my={2}
+                            w="100%"
+                            color="brand.gray600"
+                            fontWeight="lighter"
+                        >
+                            Resume
                         </Button>
                     </Link>
 
                     <Link href="/contact">
                         <Button
                             justifyContent="flex-start"
-                            aria-label="Home"
+                            aria-label="Contact"
                             p={2}
                             my={2}
-                            w="100vw"
+                            w="100%"
                             color="brand.gray600"
                             fontWeight="lighter"
                         >
                             Contact
                         </Button>
                     </Link>
+
                 </Flex> 
             </Flex>
             </Collapse>

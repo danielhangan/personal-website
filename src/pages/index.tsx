@@ -4,14 +4,16 @@ import { Main } from '../components/Main'
 import { CTA } from '../components/CTA'
 import { Footer } from '../components/Footer'
 import { Naviagation } from '../components/Navigation'
+import HeaderLayout from '../layouts/Header'
 
 const Index = () => (
   <>
-  <Container>
-    <Naviagation />
+    <HeaderLayout home>
+    </HeaderLayout>
+    {/* <Naviagation />
     <Main>
       <Hero />
-    </Main>
+    </Main> */}
 
     {/* <Main>
 
@@ -40,7 +42,6 @@ const Index = () => (
       <Text>Next ❤️ Chakra</Text>
     </Footer>
     <CTA /> */}
-  </Container>
   </>
 )
 
