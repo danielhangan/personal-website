@@ -10,7 +10,9 @@ import HeaderLayout from '../../layouts/Header';
 import {
     Heading,
     Text,
-    Code,
+    Flex,
+    Box,
+    Image,
 } from '@chakra-ui/react'
 
 
@@ -28,15 +30,27 @@ interface IPost {
 }
 
 export default function Post({ post } : {post: IPost}) {
+
+    const newTheme: object = {
+        p: props => {
+            const { children } = props;
+            return <Text mb={8}>{children}</Text>
+        },
+        h2: props => {
+            const { children } = props;
+            return <Heading as="h2" mt={12} mb={1}>{children}</Heading>
+        }
+    }
+
     return (
-    <HeaderLayout frontMatter={post}>
-        <Text>
-            <MDXRemote 
-                components={ChakraUIRenderer()} 
-                {...post.source}
-            />
-        </Text>
-    </HeaderLayout>
+        <HeaderLayout frontMatter={post}>
+            <Box pl={['auto', 'auto', 3]} vw="100%">
+                <MDXRemote
+                    components={ChakraUIRenderer(newTheme)} 
+                    {...post.source}
+                />
+            </Box>
+        </HeaderLayout>
     )
 }
 

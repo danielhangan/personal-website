@@ -19,25 +19,21 @@ export const Naviagation = () => {
 
     return (
         <HStack justify="center">
-
         {/* Desktop */}
+        {/* TODO: responsive Flex for IconButton (maybe from default theme) */}
         <Flex 
-            w={{base:'2xl', md:'3xl'}} 
-            alignItems="center" 
+            w={{base:'2xl',md:'3xl'}}
+            alignItems="center"
             justifyContent="space-between"
             pt={4}
             pb={8}
         >
-                <Flex display={['none', 'none', 'flex', 'flex' ]}>
+                <Flex display={['none', 'none', 'flex', 'flex' ]} mt={2}>
                         <Link href="/">
                             <Button
-                                m={2}
                                 ml={0}
-                                p={4}
+                                pl={3}
                                 aria-label="Home"
-                                w="100%"
-                                color="brand.gray600"
-                                fontWeight="lighter"
                                 >
                                 Home
                             </Button>
@@ -45,12 +41,7 @@ export const Naviagation = () => {
 
                         <Link href="/posts">
                             <Button
-                                m={2}
-                                p={4}
                                 aria-label="Blog"
-                                w="100%"
-                                color="brand.gray600"
-                                fontWeight="lighter"
                                 >
                                 Blog
                             </Button>
@@ -58,12 +49,7 @@ export const Naviagation = () => {
 
                         <Link href="/projects">
                             <Button
-                                m={2}
-                                p={4}
                                 aria-label="Projects"
-                                w="100%"
-                                color="brand.gray600"
-                                fontWeight="lighter"
                                 >
                                 Projects
                             </Button>
@@ -71,12 +57,7 @@ export const Naviagation = () => {
 
                         <Link href="/resume">
                             <Button
-                                m={2}
-                                p={4}
                                 aria-label="Resume"
-                                w="100%"
-                                color="brand.gray600"
-                                fontWeight="lighter"
                                 >
                                 Resume
                             </Button>
@@ -84,26 +65,24 @@ export const Naviagation = () => {
 
                         <Link href="/contact">
                             <Button
-                                m={2}
-                                p={4}
                                 aria-label="Contact"
-                                w="100%"
-                                color="brand.gray600"
-                                fontWeight="lighter"
                                 >
                                 Contact
                             </Button>
                         </Link>
                 </Flex>
                 <IconButton
+                    w="100%"
+                    justifyContent="flex-start"
                     aria-label="Open Menu"
                     mr={4}
                     icon={<HamburgerIcon />}
                     display={['flex', 'flex', 'none', 'none']}
                     onClick={onToggle}
                     />
-                <Switch 
-                    color="green"
+                <Switch
+                    // w="100vw"
+                    // justifyContent="right"
                     isChecked={isDark}
                     onChange={toggleColorMode}
                     />
@@ -142,9 +121,7 @@ export const Naviagation = () => {
                             aria-label="Home"
                             p={2}
                             my={2}
-                            w="100%"
-                            color="brand.gray600"
-                            fontWeight="lighter"
+                            vw="100%"
                         >
                            Home
                         </Button>
@@ -156,9 +133,7 @@ export const Naviagation = () => {
                             aria-label="Blog"
                             p={2} 
                             my={2}
-                            w="100%"
-                            color="brand.gray600"
-                            fontWeight="lighter"
+                            vw="100%"
                         >
                             Blog
                         </Button>
@@ -170,9 +145,7 @@ export const Naviagation = () => {
                             aria-label="projects"
                             p={2}
                             my={2}
-                            w="100%"
-                            color="brand.gray600"
-                            fontWeight="lighter"
+                            vw="100%"
                         >
                             Projects
                         </Button>
@@ -184,9 +157,7 @@ export const Naviagation = () => {
                             aria-label="Resume"
                             p={2}
                             my={2}
-                            w="100%"
-                            color="brand.gray600"
-                            fontWeight="lighter"
+                            vw="100%"
                         >
                             Resume
                         </Button>
@@ -198,9 +169,7 @@ export const Naviagation = () => {
                             aria-label="Contact"
                             p={2}
                             my={2}
-                            w="100%"
-                            color="brand.gray600"
-                            fontWeight="lighter"
+                            vw="100%"
                         >
                             Contact
                         </Button>

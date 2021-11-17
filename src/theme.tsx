@@ -28,18 +28,40 @@ const theme = extendTheme(
     },
     fonts,
     breakpoints,
+    components: {
+      Text: {
+        baseStyle: {
+          fontWeight: "lighter",
+          fontSize: "16px",
+        }
+      },
+      Code: {
+        baseStyle: {
+          width: "100%",
+          p: "16px"
+        }
+      },
+      Button: {
+        variants: {
+          ghost: {
+            color: "brand.gray700",
+            fontWeight: "lighter",
+            mx: "8px",
+            _hover: {
+              bg: "brand.gray100"
+            },
+          }
+        }, 
+        defaultProps: {
+          size:"md",
+          variant: "ghost"
+        }
+      }
+    }
   },
-  withDefaultSize({
-    size: "sm",
-    components: ['Button']
-  }),
   withDefaultColorScheme({
     colorScheme: 'brand',
     components: ['Switch']
-  }),
-    withDefaultVariant({
-    variant: 'ghost',
-    components: ['Button'],
   })
 )
 
