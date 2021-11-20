@@ -15,7 +15,6 @@ import {
   Box,
   Avatar
 } from '@chakra-ui/react'
-import { useRouter } from "next/router"
 
 
 export default function HeaderLayout({
@@ -35,9 +34,6 @@ export default function HeaderLayout({
     description: string,
     frontMatter?: any
 }) {
-    const router = useRouter()
-    const slug = router.asPath.replace('/posts/', '')
-    console.log(frontMatter)
     return (
     <>
         <Head>
@@ -62,15 +58,13 @@ export default function HeaderLayout({
         </Head>
 
 
-    <Container>
-        <Naviagation />
         <Main>
         {home? (
             <Flex
                 direction={{base:'column-reverse', md:'row'}}
                 alignItems="flex-start"
                 justifyContent="space-between"
-                w={{base: 'auto', md:'3xl'}}
+                w={{base: '100%', md:'3xl'}}
             >
                 <Box w={{base: 'auto', md:'75%'}} p="3">
                 <VStack alignItems="flex-start" fontSize="md">
@@ -101,7 +95,7 @@ export default function HeaderLayout({
                 w={{base: 'auto', md:'3xl'}}
             >
                 <VStack 
-                    w={{base:'100%', md:'3xl'}}
+                    w={{base:'auto', md:'3xl'}}
                     alignItems="flex-start"
                     pl={[0,3]}
                     spacing={6}
@@ -114,7 +108,7 @@ export default function HeaderLayout({
                     justifyContent="space-between"
                     align={['initial', 'center']}
                     direction={['column', 'row']}
-                    w="100%"
+                    w="auto"
                     mb={4}
                 >
                     <Flex align="center">
@@ -152,9 +146,6 @@ export default function HeaderLayout({
             </Link>
         </div>
         )}
-    </Container>
-
-
     </>
     )
 }

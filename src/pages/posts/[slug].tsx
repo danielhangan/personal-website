@@ -1,18 +1,15 @@
-import { useState } from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { getAllPostsSlugs, getPostData } from '../../../lib/posts';
 import { MDXRemote } from 'next-mdx-remote';
 import ChakraUIRenderer from 'chakra-ui-markdown-renderer';
-import { Main } from '../../components/Main';
 import HeaderLayout from '../../layouts/Header';
 
 
 import {
     Heading,
     Text,
-    Flex,
     Box,
-    Image,
+    Code
 } from '@chakra-ui/react'
 
 
@@ -29,16 +26,23 @@ interface IPost {
     source: { compiledSource: string }
 }
 
+
 export default function Post({ post } : {post: IPost}) {
 
     const newTheme: object = {
         p: props => {
             const { children } = props;
-            return <Text mb={8}>{children}</Text>
+            return <Text mb={4}>{children}</Text>
         },
         h2: props => {
             const { children } = props;
-            return <Heading as="h2" mt={12} mb={1}>{children}</Heading>
+            return <Heading as="h2" size="lg" mt={12} mb={1}>{children}</Heading>
+        },
+        blockquote: props => {
+            const { children } = props;
+            return <Code pt={6} mb={4} color="brand.gray600" bg="brand.gray100">
+                            {children}
+                    </Code>
         }
     }
 

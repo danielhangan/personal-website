@@ -7,6 +7,7 @@ import {
     HStack,
     Collapse,
     useDisclosure,
+    Box,
     Link as ChakraLink
  } from '@chakra-ui/react'
 import Link from 'next/link'
@@ -18,11 +19,16 @@ export const Naviagation = () => {
     const { isOpen, onToggle } = useDisclosure()
 
     return (
-        <HStack justify="center">
+        <Flex 
+            w={{base:'100%', md:'3xl'}}
+            // direction="row"
+            // alignItems="center"
+            // justifyContent="center"
+        >
         {/* Desktop */}
         {/* TODO: responsive Flex for IconButton (maybe from default theme) */}
         <Flex 
-            w={{base:'2xl',md:'3xl'}}
+            w={{base: '100%', md:'3xl'}}
             alignItems="center"
             justifyContent="space-between"
             pt={4}
@@ -71,21 +77,17 @@ export const Naviagation = () => {
                             </Button>
                         </Link>
                 </Flex>
-                <IconButton
-                    w="100%"
-                    justifyContent="flex-start"
-                    aria-label="Open Menu"
-                    mr={4}
-                    icon={<HamburgerIcon />}
-                    display={['flex', 'flex', 'none', 'none']}
-                    onClick={onToggle}
-                    />
-                <Switch
-                    // w="100vw"
-                    // justifyContent="right"
-                    isChecked={isDark}
-                    onChange={toggleColorMode}
-                    />
+                    <IconButton
+                        aria-label="Open Menu"
+                        icon={<HamburgerIcon />}
+                        display={['flex', 'flex', 'none', 'none']}
+                        onClick={onToggle}
+                        mx="0px"
+                        />
+                    <Switch
+                        isChecked={isDark}
+                        onChange={toggleColorMode}
+                        />
             </Flex>
 
             {/* Mobile */}
@@ -101,11 +103,11 @@ export const Naviagation = () => {
                 overflowY="auto"
                 flexDir="column"
             >
-                <Flex justify="flex-start" p={4}>
+                <Flex justify="flex-start" pl={3} mt={4}>
                     <IconButton
                         aria-label="Close Menu"
                         icon={
-                            <CloseIcon />
+                            <CloseIcon size="sm" />
                         }
                         onClick={onToggle}
                     />
@@ -178,6 +180,6 @@ export const Naviagation = () => {
                 </Flex> 
             </Flex>
             </Collapse>
-        </HStack>
+        </Flex>
     )
 } 

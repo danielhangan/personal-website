@@ -27,7 +27,7 @@ export default function AllPosts({ allposts }) {
                 <VStack
                     w={{base:'100%', md:'3xl'}}
                     alignItems="flex-start"
-                    pl={[0, 3]}
+                    pl={3}
                     spacing={12}
                 >
                     <Box>

@@ -25,9 +25,9 @@ export const Hero = ({
         direction={{base:'column-reverse', md:'row'}}
         alignItems="flex-start"
         justifyContent="space-between"
-        w={{base: 'auto', md:'3xl'}}
+        w={{base: '100%', md:'3xl'}}
       >
-        <Box w={{base: 'auto', md:'75%'}} p="3">
+        <Box w={{base: '100%', md:'75%'}} p="3">
           <VStack alignItems="flex-start" fontSize="md">
             <Heading size="xl">{name}</Heading>
               <Text color="brand.gray600">
@@ -40,7 +40,7 @@ export const Hero = ({
         </Box>
         <Image
           ml={4}
-          w={{base: 'auto', md:'25%'}}
+          w={{base: '100%', md:'25%'}}
           src="/images/profile.jpeg" 
           alt="Daniel Hangan" 
           boxSize={[100,100,150]}

@@ -1,7 +1,13 @@
 import HeaderLayout from '../layouts/Header'
+import { Container } from '../components/Container'
+import { Naviagation } from '../components/Navigation'
+import {
+  Flex
+} from '@chakra-ui/react'
 
 const Index = () => (
-  <>
+  <Container>
+    <Naviagation />
     <HeaderLayout home>
     </HeaderLayout>
     {/* <Naviagation />
@@ -36,7 +42,7 @@ const Index = () => (
       <Text>Next ❤️ Chakra</Text>
     </Footer>
     <CTA /> */}
-  </>
+  </Container>
 )
 
 export default Index

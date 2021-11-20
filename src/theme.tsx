@@ -38,7 +38,7 @@ const theme = extendTheme(
       Code: {
         baseStyle: {
           width: "100%",
-          p: "16px"
+          p: "8px"
         }
       },
       Button: {
@@ -51,18 +51,14 @@ const theme = extendTheme(
               bg: "brand.gray100"
             },
           }
-        }, 
+        },
         defaultProps: {
           size:"md",
           variant: "ghost"
         }
       }
     }
-  },
-  withDefaultColorScheme({
-    colorScheme: 'brand',
-    components: ['Switch']
-  })
+  }
 )
 
 export default theme
