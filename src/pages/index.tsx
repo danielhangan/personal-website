@@ -1,6 +1,8 @@
-import HeaderLayout from '../layouts/Header'
+import HeaderLayout from '../layouts/Post'
 import { Container } from '../components/Container'
 import { Naviagation } from '../components/Navigation'
+import { Hero } from '../components/Hero'
+import { Blog } from '../components/Blog'
 import {
   Flex
 } from '@chakra-ui/react'
@@ -8,8 +10,10 @@ import {
 const Index = () => (
   <Container>
     <Naviagation />
-    <HeaderLayout home>
-    </HeaderLayout>
+    <Hero />
+    <Blog home/>
+    {/* <HeaderLayout home>
+    </HeaderLayout> */}
     {/* <Naviagation />
     <Main>
       <Hero />

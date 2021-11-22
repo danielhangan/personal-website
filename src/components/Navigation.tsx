@@ -21,9 +21,6 @@ export const Naviagation = () => {
     return (
         <Flex 
             w={{base:'100%', md:'3xl'}}
-            // direction="row"
-            // alignItems="center"
-            // justifyContent="center"
         >
         {/* Desktop */}
         {/* TODO: responsive Flex for IconButton (maybe from default theme) */}
@@ -61,11 +58,11 @@ export const Naviagation = () => {
                             </Button>
                         </Link>
 
-                        <Link href="/resume">
+                        <Link href="/dashboard">
                             <Button
                                 aria-label="Resume"
                                 >
-                                Resume
+                                Dashboard
                             </Button>
                         </Link>
 
@@ -76,7 +73,7 @@ export const Naviagation = () => {
                                 Contact
                             </Button>
                         </Link>
-                </Flex>
+                </Flex> 
                     <IconButton
                         aria-label="Open Menu"
                         icon={<HamburgerIcon />}
@@ -107,7 +104,7 @@ export const Naviagation = () => {
                     <IconButton
                         aria-label="Close Menu"
                         icon={
-                            <CloseIcon size="sm" />
+                            <CloseIcon />
                         }
                         onClick={onToggle}
                     />

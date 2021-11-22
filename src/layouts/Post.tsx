@@ -17,7 +17,7 @@ import {
 } from '@chakra-ui/react'
 
 
-export default function HeaderLayout({
+export default function PostLayout({
     children,
     home,
     name,
@@ -50,54 +50,23 @@ export default function HeaderLayout({
             /> */}
             <meta name="og:title" content={name + "|" + job_title} />
             <meta name="twitter:card" content="summary_large_image" />
-            {home? (
-                <title>Daniel Hangan</title>
-            ) : (
-                <title>{frontMatter.title}</title>
-            )}
+            <title>{frontMatter.title}</title>
         </Head>
 
 
+    <Container>
+        <Naviagation />
         <Main>
-        {home? (
             <Flex
                 direction={{base:'column-reverse', md:'row'}}
                 alignItems="flex-start"
                 justifyContent="space-between"
                 w={{base: '100%', md:'3xl'}}
-            >
-                <Box w={{base: 'auto', md:'75%'}} p="3">
-                <VStack alignItems="flex-start" fontSize="md">
-                    <Heading size="xl">{name}</Heading>
-                    <Text color="brand.gray600">
-                    {job_title} at <b>{company}</b>
-                    </Text>
-                    <Text color="brand.gray600">
-                    {description}
-                    </Text> 
-                </VStack>
-                </Box>
-                <Image
-                    ml={4}
-                    w={{base: 'auto', md:'25%'}}
-                    src="/images/profile.jpeg" 
-                    alt="Daniel Hangan" 
-                    boxSize={[100,100,150]}
-                    borderRadius="full"
-                />
-            </Flex>
-            ) : (
-            <>
-            <Flex
-                direction={{base:'column-reverse', md:'row'}}
-                alignItems="flex-start"
-                justifyContent="space-between"
-                w={{base: 'auto', md:'3xl'}}
+                pl={3}
             >
                 <VStack 
-                    w={{base:'auto', md:'3xl'}}
+                    w={{base:'100%', md:'3xl'}}
                     alignItems="flex-start"
-                    pl={[0,3]}
                     spacing={6}
                 >
                     <Box>
@@ -108,10 +77,10 @@ export default function HeaderLayout({
                     justifyContent="space-between"
                     align={['initial', 'center']}
                     direction={['column', 'row']}
-                    w="auto"
+                    w="100%"
                     mb={4}
                 >
-                    <Flex align="center">
+                    <Flex alignItems="flex-start">
                         <Avatar
                             size="xs"
                             name={name}
@@ -124,33 +93,24 @@ export default function HeaderLayout({
                         </Text>
 
                     </Flex>
-                <Text fontSize="sm" textAlign={["start", "start", "end"]} color="brand.gray600" minWidth="100px" mt={[2,0]}>
-                    {readingTime(frontMatter.text).text}
-                </Text>
+
+                    <Text fontSize="sm" textAlign={["start", "start", "end"]} color="brand.gray600" minWidth="100px" mt={[2,0]}>
+                        {readingTime(frontMatter.text).text}
+                    </Text>
+
 
                 </Flex>
                 
                 </VStack>
             </Flex>
-            </>
-            )}
-    
             {children}
-        
         </Main>
-
-        {!home && (
-        <div>
-            <Link href="/">
-            <a>← Back to home</a>
-            </Link>
-        </div>
-        )}
+    </Container>
     </>
     )
 }
 
-HeaderLayout.defaultProps = {
+PostLayout.defaultProps = {
   name: 'Daniel Hangan',
   job_title: 'Python Engineer',
   company: 'Radicle Insights',

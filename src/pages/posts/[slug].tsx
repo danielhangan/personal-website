@@ -2,7 +2,7 @@ import { GetStaticProps, GetStaticPaths } from 'next';
 import { getAllPostsSlugs, getPostData } from '../../../lib/posts';
 import { MDXRemote } from 'next-mdx-remote';
 import ChakraUIRenderer from 'chakra-ui-markdown-renderer';
-import HeaderLayout from '../../layouts/Header';
+import HeaderLayout from '../../layouts/Post';
 
 
 import {
@@ -11,6 +11,7 @@ import {
     Box,
     Code
 } from '@chakra-ui/react'
+import PostLayout from '../../layouts/Post';
 
 
 interface IPost {
@@ -47,14 +48,14 @@ export default function Post({ post } : {post: IPost}) {
     }
 
     return (
-        <HeaderLayout frontMatter={post}>
-            <Box pl={['auto', 'auto', 3]} vw="100%">
+        <PostLayout frontMatter={post}>
+            <Box pl={3} w={{base: '100%', md: '3xl'}}>
                 <MDXRemote
                     components={ChakraUIRenderer(newTheme)} 
                     {...post.source}
                 />
             </Box>
-        </HeaderLayout>
+        </PostLayout>
     )
 }
 
