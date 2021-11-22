@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Container } from '../components/Container'
+import { Main } from '../components/Main'
 import { Naviagation } from '../components/Navigation'
 import { Date } from '../components/Date'
 import {
@@ -12,7 +13,6 @@ import {
     Link as ChakraLink
 } from '@chakra-ui/react'
 import Link from 'next/link'
-import { Main } from '../components/Main'
 
 
 export const Blog = ({ posts, home } : { posts?: any, home? : React.ReactNode }) => {
