@@ -1,8 +1,7 @@
 import React from "react";
 
-import { Container } from '../components/Container'
+import ContainerLayout from "../layouts/Container";
 import { Main } from '../components/Main'
-import { Naviagation } from '../components/Navigation'
 import { Date } from '../components/Date'
 import {
     Heading,
@@ -22,15 +21,15 @@ export const Blog = ({ posts, home } : { posts?: any, home? : React.ReactNode })
         {home? (
             <Text>3 posts</Text>
         ) : (
-        <Container>
-            <Naviagation />
+        <ContainerLayout>
+
             <Main>
                 <VStack
                     w={{base:'100%', md:'3xl'}}
                     alignItems="flex-start"
                     pl={3}
                     spacing={12}
-                >
+                    >
                     <Box>
                         <Heading size="xl" mb={4}>Blog</Heading>
                         <Text color="brand.gray600">
@@ -48,7 +47,7 @@ export const Blog = ({ posts, home } : { posts?: any, home? : React.ReactNode })
                                     <Flex
                                         direction={{base: 'column', md:'row'}}
                                         mb={2}
-                                    >
+                                        >
                                         <Heading size="md" w={{base: 'auto', md:'75%'}}>
                                             <Link href={`/posts/${post.slug}`}>
                                                 {post.title}
@@ -65,7 +64,7 @@ export const Blog = ({ posts, home } : { posts?: any, home? : React.ReactNode })
                     </Box>  
                 </VStack>
             </Main>
-        </Container>
+        </ContainerLayout>
         )}
         </>
     )

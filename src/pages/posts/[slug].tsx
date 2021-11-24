@@ -2,8 +2,6 @@ import { GetStaticProps, GetStaticPaths } from 'next';
 import { getAllPostsSlugs, getPostData } from '../../../lib/posts';
 import { MDXRemote } from 'next-mdx-remote';
 import ChakraUIRenderer from 'chakra-ui-markdown-renderer';
-import HeaderLayout from '../../layouts/Post';
-
 
 import {
     Heading,

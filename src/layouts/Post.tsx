@@ -2,8 +2,7 @@
 import Head from "next/head"
 import Link from "next/link"
 import { Main } from "../components/Main"
-import { Naviagation } from "../components/Navigation"
-import { Container } from "../components/Container"
+import ContainerLayout from "./Container"
 import { Date } from "../components/Date"
 import readingTime from 'reading-time'
 import { 
@@ -54,8 +53,8 @@ export default function PostLayout({
         </Head>
 
 
-    <Container>
-        <Naviagation />
+    <ContainerLayout>
+
         <Main>
             <Flex
                 direction={{base:'column-reverse', md:'row'}}
@@ -105,7 +104,7 @@ export default function PostLayout({
             </Flex>
             {children}
         </Main>
-    </Container>
+    </ContainerLayout>
     </>
     )
 }
