@@ -3,6 +3,8 @@ import { Container } from '../components/Container'
 import { Naviagation } from '../components/Navigation'
 import { Hero } from '../components/Hero'
 import { Blog } from '../components/Blog'
+import { Main } from '../components/Main'
+import { Footer } from '../components/Footer'
 import {
   Flex
 } from '@chakra-ui/react'
@@ -10,8 +12,11 @@ import {
 const Index = () => (
   <Container>
     <Naviagation />
-    <Hero />
-    <Blog home/>
+    <Main>
+      <Hero />
+      <Blog home/>
+    </Main>
+    <Footer />
     {/* <HeaderLayout home>
     </HeaderLayout> */}
     {/* <Naviagation />
