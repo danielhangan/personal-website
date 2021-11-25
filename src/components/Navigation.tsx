@@ -19,9 +19,7 @@ export const Naviagation = () => {
     const { isOpen, onToggle } = useDisclosure()
 
     return (
-        <Flex 
-            w={{base:'100%', md:'3xl'}}
-        >
+        <Flex w={{base:'100%', md:'3xl'}}>
         {/* Desktop */}
         {/* TODO: responsive Flex for IconButton (maybe from default theme) */}
         <Flex 
