@@ -13,6 +13,7 @@ export const Footer = (props: FlexProps) => {
     <>
       <Divider
         w={{base: '100%', md:'3xl'}} 
+        mt={8}
         />
       <Flex 
         as="footer"
@@ -34,7 +35,7 @@ export const Footer = (props: FlexProps) => {
             <Link href="/projects">Projects</Link>
           </VStack>
 
-          <VStack spacing={4}w="33%" alignItems="flex-start">
+          <VStack spacing={4} w="33%" alignItems="flex-start">
             <Link href="https://twitter.com/hangandaniel" passHref>Twitter</Link>
             <Link href="https://danielhangan.medium.com/" passHref>Medium</Link>
             <Link href="https://github.com/danielhangan" passHref>Github</Link>
