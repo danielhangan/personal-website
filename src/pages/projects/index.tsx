@@ -1,8 +1,5 @@
-import { Container } from '../../components/Container'
 import ContainerLayout from '../../layouts/Container'
 import { Main } from '../../components/Main'
-import { Naviagation } from '../../components/Navigation'
-import { Footer } from '../../components/Footer'
 import {
     VStack,
     Heading,
@@ -25,6 +22,9 @@ import {
     Link as ChakraLink,
 } from '@chakra-ui/react'
 import { useDisclosure } from '@chakra-ui/hooks'
+import { Github } from '@emotion-icons/fa-brands'
+
+
 
 
 export default function Projects () {
@@ -33,44 +33,44 @@ export default function Projects () {
 
     const ProjectExample = [
     {
-        title: "project example",
-        slug: "project-example",
+        title: "Open Source Project",
+        slug: "open-source",
         stack: "Python,Django,React,Material UI,Docker,GCP,Cloud Functions",
-        description: "Second-hand mechanical keyboard marketplace using smart contracts",
+        description: "Open source project for ebay",
         imageUrl: "https://images.unsplash.com/photo-1598662779094-110c2bad80b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1246&q=80",
         date: "22/11/2021",
         badge: "open-source",
-        link: "https://github.com"
+        link: "https://ebay.com"
     },
     {
-        title: "project example",
-        slug: "project-example",
-        stack: "Python,Django,React,Material UI,Docker,GCP,Cloud Functions",
-        description: "Second-hand mechanical keyboard marketplace using smart contracts",
+        title: "Machine Learning",
+        slug: "machine-learning",
+        stack: "Python,pandas,numpy,jupyter notebook,scipy,NLP",
+        description: "Mega Machine Learning algortihm written for Amazon. Awesome experience.",
         imageUrl: "https://images.unsplash.com/photo-1598662779094-110c2bad80b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1246&q=80",
         date: "22/11/2021",
         badge: "Machine Learning",
-        link: "https://github.com"
+        link: "https://amazon.com"
     },
     {
-        title: "project example",
-        slug: "project-example",
-        stack: "Python,Django,React,Material UI,Docker,GCP,Cloud Functions",
-        description: "Second-hand mechanical keyboard marketplace using smart contracts",
+        title: "Full Stack project",
+        slug: "full-stack",
+        stack: "Python,Django,FastAPI,NextJS,Chakra UI",
+        description: "Full-Stack project for google. I called it Google Cloud Platform.",
         imageUrl: "https://images.unsplash.com/photo-1598662779094-110c2bad80b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1246&q=80",
         date: "22/11/2021",
-        badge: "open-source",
-        link: "https://github.com"
+        badge: "Full-Stack",
+        link: "https://google.com"
     },
     {
-        title: "project example",
-        slug: "project-example",
-        stack: "Python,Django,React,Material UI,Docker,GCP,Cloud Functions",
-        description: "Second-hand mechanical keyboard marketplace using smart contracts",
+        title: "Blockchain",
+        slug: "blockchain",
+        stack: "TypeScript,Nodejs,Solidity,Solana,Ethereum",
+        description: "Built my own blockchain for finance. Making cheap transactions back and forth to Moldova.",
         imageUrl: "https://images.unsplash.com/photo-1598662779094-110c2bad80b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1246&q=80",
-        date: "22/11/2021",
-        badge: "Machine Learning",
-        link: "https://github.com"
+        date: "02/01/2021",
+        badge: "Blockchain",
+        link: "https://danielhangan.com"
     }
 ]
 
@@ -95,13 +95,15 @@ export default function Projects () {
                 <Grid templateColumns="repeat(2, 1fr)" gap={4}>
 
                 {ProjectExample.map((project, index) => (
-                    <GridItem colSpan={[2,1]}>
+                    <GridItem colSpan={[2,1]} key={project.slug}>
                         <Box 
+                            minH="387px"
                             borderWidth="1px"
                             borderRadius="lg"
                             align="center"
                             p={4}
                             bg="white"
+                            key={project.slug}
                             >
                             <Image src={project.imageUrl} alt="hello" borderRadius="md"/>
     
@@ -112,24 +114,24 @@ export default function Projects () {
                                             {project.badge}
                                     </Badge>
                                 </Box>
-                            <Box display="flex" mt={2} align="left">
+                                <Box display="flex" mt={2} align="left">
+                                    {/* TODO: convert markup to Chakra UI */}
                                     <Text>{project.description}</Text>
                                 </Box>
                             </Box>
                             <Button 
-                                key={index} 
-                                onClick={onOpen}
+                                // onClick={onOpen} --> MODAL NOT WORKING. Check https://stackoverflow.com/questions/69528599/chakra-ui-modal-component-does-not-work-with-array-of-object
                                 w="100%"
                                 p={0}
                                 m={0}
                                 mt={2}
-                                align="left"
+                                bg="brand.gray100"
                                 >
-                                     More details
+                                    More details {project.title}
                             </Button>
                         </Box> 
-
-                        <Modal onClose={onClose} isOpen={isOpen} isCentered>
+                            
+                        <Modal isOpen={isOpen} onClose={onClose} isCentered>
                             <ModalOverlay />
                             <ModalContent m={[4, 0, 0]}>
                                 <ModalHeader>{project.title}</ModalHeader>
@@ -137,8 +139,10 @@ export default function Projects () {
                                 <ModalBody>
                                     <Box>
                                         <Image src={project.imageUrl} alt={project.slug} borderRadius="md" />
+
+                                        {/* TECHNOLOGIES */}
                                         <Box flexDirection="row" my={2}>
-                                            {project.stack.split(",").map((technology) => (
+                                            {project.stack.split(",").map((technology, index) => (
                                                     <Badge 
                                                         m={1}
                                                         ml={0}
@@ -148,20 +152,24 @@ export default function Projects () {
                                                         colorScheme="teal"
                                                         fontWeight="semibold"
                                                         letterSpacing="wide"
+                                                        key={index}
                                                     >{technology}</Badge>
                                                 )                                      
                                             )}
                                         </Box>
+
+                                        {/* DESCRIPTION */}
                                         <Text mb={2}>
                                             {project.description}
                                         </Text>
 
+                                        {/* PROJECT LINK */}
                                         <Box>
-                                            <Text>Links</Text>
                                             <Flex direction="row" w="100%">
-                                                <ChakraLink>Github</ChakraLink>
-                                                {/* TODO: ADD ICONS */}
-                                                {/* <FontAwesome icon="fa-brands fa-github" /> */}
+                                                <ChakraLink href={project.link} isExternal>
+                                                    <Github size="25px" />
+                                                </ChakraLink>
+                                                <Text>{project.link}</Text>
                                             </Flex>
                                         </Box>
                                     </Box>
