@@ -21,15 +21,13 @@ import {
     Grid,
     Link as ChakraLink,
 } from '@chakra-ui/react'
-import { useDisclosure } from '@chakra-ui/hooks'
-import { Github } from '@emotion-icons/fa-brands'
 
+import { ProjectModal } from '../../components/ProjectModal'
 
 
 
 export default function Projects () {
 
-    const { isOpen, onOpen, onClose } = useDisclosure()
 
     const ProjectExample = [
     {
@@ -97,18 +95,24 @@ export default function Projects () {
                 {ProjectExample.map((project, index) => (
                     <GridItem colSpan={[2,1]} key={project.slug}>
                         <Box 
-                            minH="387px"
+                            minH="420px"
                             borderWidth="1px"
                             borderRadius="lg"
                             align="center"
                             p={4}
                             bg="white"
-                            key={project.slug}
                             >
+
+                            <Heading
+                                size="md"
+                                pb={2}
+                                color="brand.gray600"
+                            >{project.title}</Heading>
+
                             <Image src={project.imageUrl} alt="hello" borderRadius="md"/>
-    
-                            <Spacer />
-                            <Box pt={4} mb={0} alignItems="baseline">
+
+                            <Flex direction="column" h="100%" justifyContent="space-between">
+                            <Box pt={4} mb={0} alignItems="start">
                                 <Box display="flex">
                                     <Badge borderRadius="10px" fontSize="10px" p={1.5} colorScheme="teal">
                                             {project.badge}
@@ -119,68 +123,16 @@ export default function Projects () {
                                     <Text>{project.description}</Text>
                                 </Box>
                             </Box>
-                            <Button 
-                                // onClick={onOpen} --> MODAL NOT WORKING. Check https://stackoverflow.com/questions/69528599/chakra-ui-modal-component-does-not-work-with-array-of-object
-                                w="100%"
-                                p={0}
-                                m={0}
-                                mt={2}
-                                bg="brand.gray100"
-                                >
-                                    More details {project.title}
-                            </Button>
-                        </Box> 
+
+                            {/* MODAL COMPONENT */}
+                            <ProjectModal key={index} project={project} />
                             
-                        <Modal isOpen={isOpen} onClose={onClose} isCentered>
-                            <ModalOverlay />
-                            <ModalContent m={[4, 0, 0]}>
-                                <ModalHeader>{project.title}</ModalHeader>
-                                <ModalCloseButton />
-                                <ModalBody>
-                                    <Box>
-                                        <Image src={project.imageUrl} alt={project.slug} borderRadius="md" />
-
-                                        {/* TECHNOLOGIES */}
-                                        <Box flexDirection="row" my={2}>
-                                            {project.stack.split(",").map((technology, index) => (
-                                                    <Badge 
-                                                        m={1}
-                                                        ml={0}
-                                                        p={1.5}
-                                                        fontSize="10px"
-                                                        borderRadius="10px"
-                                                        colorScheme="teal"
-                                                        fontWeight="semibold"
-                                                        letterSpacing="wide"
-                                                        key={index}
-                                                    >{technology}</Badge>
-                                                )                                      
-                                            )}
-                                        </Box>
-
-                                        {/* DESCRIPTION */}
-                                        <Text mb={2}>
-                                            {project.description}
-                                        </Text>
-
-                                        {/* PROJECT LINK */}
-                                        <Box>
-                                            <Flex direction="row" w="100%">
-                                                <ChakraLink href={project.link} isExternal>
-                                                    <Github size="25px" />
-                                                </ChakraLink>
-                                                <Text>{project.link}</Text>
-                                            </Flex>
-                                        </Box>
-                                    </Box>
-                                </ModalBody>
-                                <ModalFooter>
-                                    <Button onClick={onClose}>Close</Button>
-                                </ModalFooter>
-                            </ModalContent>
-                        </Modal>
+                            </Flex>
+                        </Box>
+                            
                     </GridItem>
                 ))}
+
 
                 </Grid>
                 </Box>

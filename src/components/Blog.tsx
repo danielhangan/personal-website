@@ -34,7 +34,7 @@ export const Blog = ({ posts, home } : { posts?: any, home? : React.ReactNode })
                         <Heading size="xl" mb={4}>Blog</Heading>
                         <Text color="brand.gray600">
                             I have been writing casually about programming, health and productivity.
-                            You can find more articles on my <ChakraLink fontWeight="bold" href="https://danielhangan.medium.com/" passHref>
+                            You can find more articles on my <ChakraLink fontWeight="bold" href="https://danielhangan.medium.com/">
                                  medium page.
                             </ChakraLink>
                         </Text>

@@ -56,11 +56,11 @@ export const Naviagation = () => {
                             </Button>
                         </Link>
 
-                        <Link href="/dashboard">
+                        <Link href="/resume">
                             <Button
                                 aria-label="Resume"
                                 >
-                                Dashboard
+                                Resume
                             </Button>
                         </Link>
 
