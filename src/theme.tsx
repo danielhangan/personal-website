@@ -30,27 +30,37 @@ const theme = extendTheme(
     breakpoints,
     components: {
       Text: {
-        baseStyle: {
+        baseStyle: (props) => ({
           fontWeight: "lighter",
           fontSize: "16px",
+          color: props.colorMode == "dark" ? "brand.gray300" : "brand.gray600"
+        })
+      },
+      // TODO: brand bg color problem on the projects page
+      Badge: {
+        variants: {
+          grey: (props) => ({
+            bg: props.colorMode == "dark" ? "brand.gray800" : "brand.gray900"
+          })
         }
       },
       Code: {
-        baseStyle: {
+        baseStyle: (props) => ({
           width: "100%",
-          p: "8px"
-        }
+          p: "8px",
+          color: props.colorMode == "dark" ? "brand.gray300" : "brand.gray600"
+        })
       },
       Button: {
         variants: {
-          ghost: {
-            color: "brand.gray700",
+          ghost: (props) => ({
+            color: props.colorMode == "dark" ? "brand.gray300" : "brand.gray600",
             fontWeight: "lighter",
             mx: "8px",
             _hover: {
-              bg: "brand.gray100"
+              bg: props.colorMode == "dark" ? "brand.gray600" : "brand.gray300"
             },
-          }
+          })
         },
         defaultProps: {
           size:"md",

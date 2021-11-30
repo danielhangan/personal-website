@@ -30,10 +30,10 @@ export const Hero = ({
         <Box w={{base: '100%', md:'75%'}} p="3">
           <VStack alignItems="flex-start" fontSize="md">
             <Heading size="xl">{name}</Heading>
-              <Text color="brand.gray600">
+              <Text>
               {job_title} at <b>{company}</b>
             </Text>
-            <Text color="brand.gray600">
+            <Text>
               {description}
             </Text> 
           </VStack>

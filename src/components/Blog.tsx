@@ -32,7 +32,7 @@ export const Blog = ({ posts, home } : { posts?: any, home? : React.ReactNode })
                     >
                     <Box>
                         <Heading size="xl" mb={4}>Blog</Heading>
-                        <Text color="brand.gray600">
+                        <Text>
                             I have been writing casually about programming, health and productivity.
                             You can find more articles on my <ChakraLink fontWeight="bold" href="https://danielhangan.medium.com/">
                                  medium page.
@@ -53,12 +53,12 @@ export const Blog = ({ posts, home } : { posts?: any, home? : React.ReactNode })
                                                 {post.title}
                                             </Link>
                                         </Heading>
-                                        <Text w={{base: 'auto', md:'25%'}} textAlign={["start", "start", "end"]} fontSize="sm" color="brand.gray600">
+                                        <Text w={{base: 'auto', md:'25%'}} textAlign={["start", "start", "end"]} fontSize="sm">
                                             <Date dateString={post.date}/>
                                         </Text>
                                     </Flex>
 
-                                    <Text color="brand.gray600">{post.description}</Text>
+                                    <Text>{post.description}</Text>
                             </Box>
                         ))} 
                     </Box>  

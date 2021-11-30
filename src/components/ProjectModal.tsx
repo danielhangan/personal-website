@@ -29,11 +29,13 @@ export const ProjectModal = ({project} : {project : any}) => {
         <Box as="section">
         <Button 
             onClick={onOpen}
+            _hover={{ bg: 'brand.gray300'}}
             w="100%"
             p={0}
             m={0}
             mt={2}
             bg="brand.gray100"
+            color="brand.gray600"
             >
                 More details {project.title}
         </Button>
@@ -41,7 +43,7 @@ export const ProjectModal = ({project} : {project : any}) => {
         <Modal isOpen={isOpen} onClose={onClose} isCentered>
             <ModalOverlay />
             <ModalContent m={[4, 0, 0]} pb={2}>
-                <ModalHeader>{project.title}</ModalHeader>
+                <ModalHeader pb={0} textAlign="center">{project.title}</ModalHeader>
                 <ModalCloseButton />
                 <ModalBody>
                     <Box>
@@ -66,6 +68,7 @@ export const ProjectModal = ({project} : {project : any}) => {
     
                         {/* DESCRIPTION */}
                         <Text mb={2}>
+                            {/* TODO: convert markup to Chakra UI */}
                             {project.description}
                         </Text>
     

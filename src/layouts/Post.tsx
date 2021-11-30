@@ -86,14 +86,14 @@ export default function PostLayout({
                             src="/images/profile.jpeg"
                             mr={2}
                         />
-                        <Text fontSize="sm" color="brand.gray600">
+                        <Text fontSize="sm">
                             {name + " / "}
                             <Date dateString={frontMatter.date}/>
                         </Text>
 
                     </Flex>
 
-                    <Text fontSize="sm" textAlign={["start", "start", "end"]} color="brand.gray600" minWidth="100px" mt={[2,0]}>
+                    <Text fontSize="sm" textAlign={["start", "start", "end"]} minWidth="100px" mt={[2,0]}>
                         {readingTime(frontMatter.text).text}
                     </Text>
 

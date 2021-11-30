@@ -39,7 +39,7 @@ export default function Post({ post } : {post: IPost}) {
         },
         blockquote: props => {
             const { children } = props;
-            return <Code pt={6} mb={4} color="brand.gray600" bg="brand.gray100">
+            return <Code pt={6} mb={4}>
                             {children}
                     </Code>
         }

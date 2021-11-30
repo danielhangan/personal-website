@@ -34,6 +34,7 @@ export default function Projects () {
         title: "Open Source Project",
         slug: "open-source",
         stack: "Python,Django,React,Material UI,Docker,GCP,Cloud Functions",
+        short_description: "short description 1, awesome open source project, developed with ebay",
         description: "Open source project for ebay",
         imageUrl: "https://images.unsplash.com/photo-1598662779094-110c2bad80b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1246&q=80",
         date: "22/11/2021",
@@ -44,6 +45,7 @@ export default function Projects () {
         title: "Machine Learning",
         slug: "machine-learning",
         stack: "Python,pandas,numpy,jupyter notebook,scipy,NLP",
+        short_description: "short description 2",
         description: "Mega Machine Learning algortihm written for Amazon. Awesome experience.",
         imageUrl: "https://images.unsplash.com/photo-1598662779094-110c2bad80b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1246&q=80",
         date: "22/11/2021",
@@ -54,6 +56,7 @@ export default function Projects () {
         title: "Full Stack project",
         slug: "full-stack",
         stack: "Python,Django,FastAPI,NextJS,Chakra UI",
+        short_description: "short description 3",
         description: "Full-Stack project for google. I called it Google Cloud Platform.",
         imageUrl: "https://images.unsplash.com/photo-1598662779094-110c2bad80b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1246&q=80",
         date: "22/11/2021",
@@ -64,6 +67,7 @@ export default function Projects () {
         title: "Blockchain",
         slug: "blockchain",
         stack: "TypeScript,Nodejs,Solidity,Solana,Ethereum",
+        short_description: "short description 4",
         description: "Built my own blockchain for finance. Making cheap transactions back and forth to Moldova.",
         imageUrl: "https://images.unsplash.com/photo-1598662779094-110c2bad80b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1246&q=80",
         date: "02/01/2021",
@@ -83,7 +87,7 @@ export default function Projects () {
                 >
                 <Box w="100%">
                     <Heading size="xl" mb={4}>Projects</Heading>
-                    <Text color="brand.gray600">
+                    <Text>
                         I am passionate about Full-Stack Development and Data Science with Python and JavaScript.
                     </Text>
                 </Box>
@@ -95,39 +99,35 @@ export default function Projects () {
                 {ProjectExample.map((project, index) => (
                     <GridItem colSpan={[2,1]} key={project.slug}>
                         <Box 
-                            minH="420px"
+                            bg="white"
                             borderWidth="1px"
                             borderRadius="lg"
                             align="center"
                             p={4}
-                            bg="white"
                             >
 
-                            <Heading
-                                size="md"
-                                pb={2}
-                                color="brand.gray600"
-                            >{project.title}</Heading>
+                            <Heading size="md" pb={2} color="brand.gray900">{project.title}</Heading>
 
                             <Image src={project.imageUrl} alt="hello" borderRadius="md"/>
 
-                            <Flex direction="column" h="100%" justifyContent="space-between">
-                            <Box pt={4} mb={0} alignItems="start">
+                            <VStack m={0} alignItems="flex-start">
+                            <Box pt={4} mb={0} w="100">
                                 <Box display="flex">
-                                    <Badge borderRadius="10px" fontSize="10px" p={1.5} colorScheme="teal">
+                                    <Badge borderRadius="10px" fontSize="10px" p={1.5}>
                                             {project.badge}
                                     </Badge>
                                 </Box>
-                                <Box display="flex" mt={2} align="left">
-                                    {/* TODO: convert markup to Chakra UI */}
-                                    <Text>{project.description}</Text>
+                                <Box mt={2} align="left" minH={12}>
+                                    <Text color="brand.gray600">{project.short_description}</Text>
                                 </Box>
                             </Box>
 
                             {/* MODAL COMPONENT */}
-                            <ProjectModal key={index} project={project} />
+                            <Box w="100%">
+                                <ProjectModal key={project.slug} project={project} />
+                            </Box>
                             
-                            </Flex>
+                            </VStack>
                         </Box>
                             
                     </GridItem>
