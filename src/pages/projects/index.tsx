@@ -4,21 +4,12 @@ import {
     VStack,
     Heading,
     Box,
-    Flex,
-    Button,
-    Modal,
-    ModalOverlay,
-    ModalHeader,
-    ModalBody,
-    ModalFooter,
-    ModalContent,
-    ModalCloseButton,
     Text,
-    Spacer,
     Image,
     Badge,
     GridItem,
     Grid,
+    useColorMode,
     Link as ChakraLink,
 } from '@chakra-ui/react'
 
@@ -27,6 +18,9 @@ import { ProjectModal } from '../../components/ProjectModal'
 
 
 export default function Projects () {
+
+    const { colorMode } = useColorMode()
+    const bgColor = { light: 'white', dark: 'brand.gray600' }
 
 
     const ProjectExample = [
@@ -99,26 +93,26 @@ export default function Projects () {
                 {ProjectExample.map((project, index) => (
                     <GridItem colSpan={[2,1]} key={project.slug}>
                         <Box 
-                            bg="white"
+                            bg={bgColor[colorMode]}
                             borderWidth="1px"
                             borderRadius="lg"
                             align="center"
                             p={4}
-                            >
+                        >
 
-                            <Heading size="md" pb={2} color="brand.gray900">{project.title}</Heading>
+                            <Heading size="md" pb={2}>{project.title}</Heading>
 
                             <Image src={project.imageUrl} alt="hello" borderRadius="md"/>
 
                             <VStack m={0} alignItems="flex-start">
                             <Box pt={4} mb={0} w="100">
                                 <Box display="flex">
-                                    <Badge borderRadius="10px" fontSize="10px" p={1.5}>
+                                    <Badge borderRadius="10px" fontSize="10px" p={1.5} colorScheme="teal">
                                             {project.badge}
                                     </Badge>
                                 </Box>
                                 <Box mt={2} align="left" minH={12}>
-                                    <Text color="brand.gray600">{project.short_description}</Text>
+                                    <Text>{project.short_description}</Text>
                                 </Box>
                             </Box>
 

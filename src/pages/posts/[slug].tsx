@@ -31,7 +31,7 @@ export default function Post({ post } : {post: IPost}) {
     const newTheme: object = {
         p: props => {
             const { children } = props;
-            return <Text mb={4}>{children}</Text>
+            return <Text mb={2}>{children}</Text>
         },
         h2: props => {
             const { children } = props;
@@ -39,8 +39,10 @@ export default function Post({ post } : {post: IPost}) {
         },
         blockquote: props => {
             const { children } = props;
-            return <Code pt={6} mb={4}>
+            return <Code pt={6} mb={4} mx={2} borderRadius="10px">
+                    <Text px={4}>
                             {children}
+                    </Text>
                     </Code>
         }
     }

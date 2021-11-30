@@ -16,6 +16,7 @@ import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 export const Naviagation = () => {
     const { colorMode, toggleColorMode } = useColorMode()
     const isDark = colorMode === 'dark'
+    const menuColor = { light: 'gray.50', dark: 'brand.gray900'}
     const { isOpen, onToggle } = useDisclosure()
 
     return (
@@ -56,14 +57,6 @@ export const Naviagation = () => {
                             </Button>
                         </Link>
 
-                        <Link href="/resume">
-                            <Button
-                                aria-label="Resume"
-                                >
-                                Resume
-                            </Button>
-                        </Link>
-
                         <Link href="/contact">
                             <Button
                                 aria-label="Contact"
@@ -90,7 +83,7 @@ export const Naviagation = () => {
             <Flex
                 w="100vw"
                 h="100vh"
-                bgColor="gray.50"
+                bg={menuColor[colorMode]}
                 zIndex={20}
                 pos="fixed"
                 top="0"
@@ -108,17 +101,18 @@ export const Naviagation = () => {
                     />
                 </Flex>
                 <Flex
+                    w="100%"
                     flexDir="column"
                     align="flex-start"
                     p={4}
                 >
                     <Link href="/">
                         <Button
+                            w="95%"
                             justifyContent="flex-start"
                             aria-label="Home"
                             p={2}
                             my={2}
-                            vw="100%"
                         >
                            Home
                         </Button>
@@ -126,11 +120,11 @@ export const Naviagation = () => {
 
                     <Link href="/posts">
                         <Button
+                            w="95%"
                             justifyContent="flex-start"
                             aria-label="Blog"
                             p={2} 
                             my={2}
-                            vw="100%"
                         >
                             Blog
                         </Button>
@@ -138,35 +132,23 @@ export const Naviagation = () => {
 
                     <Link href="/projects">
                         <Button
+                            w="95%"
                             justifyContent="flex-start"
                             aria-label="projects"
                             p={2}
                             my={2}
-                            vw="100%"
                         >
                             Projects
                         </Button>
                     </Link>
 
-                    <Link href="/resume">
-                        <Button
-                            justifyContent="flex-start"
-                            aria-label="Resume"
-                            p={2}
-                            my={2}
-                            vw="100%"
-                        >
-                            Resume
-                        </Button>
-                    </Link>
-
                     <Link href="/contact">
                         <Button
+                            w="95%"
                             justifyContent="flex-start"
                             aria-label="Contact"
                             p={2}
                             my={2}
-                            vw="100%"
                         >
                             Contact
                         </Button>

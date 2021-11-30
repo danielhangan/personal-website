@@ -32,6 +32,7 @@ export const Footer = (props: FlexProps) => {
           <VStack spacing={4} w="33%" alignItems="flex-start">
             <Link href="/">Home</Link>
             <Link href="/about">About</Link>
+            <Link href="/posts">Blog</Link>
             <Link href="/projects">Projects</Link>
           </VStack>
 
@@ -43,7 +44,7 @@ export const Footer = (props: FlexProps) => {
           </VStack>
 
           <VStack spacing={4} w="33%" alignItems="flex-start">
-            <Link href="/dashboard">Dashboard</Link>
+            <Link href="/resume">Resume</Link>
             <Link href="/tech-stack">Tech Stack</Link>
             <Link href="/contact">Contact</Link>
           </VStack>

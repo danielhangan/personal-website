@@ -37,7 +37,7 @@ export const ProjectModal = ({project} : {project : any}) => {
             bg="brand.gray100"
             color="brand.gray600"
             >
-                More details {project.title}
+                More details
         </Button>
         {/* MODAL SECTION */}
         <Modal isOpen={isOpen} onClose={onClose} isCentered>

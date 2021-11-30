@@ -36,14 +36,6 @@ const theme = extendTheme(
           color: props.colorMode == "dark" ? "brand.gray300" : "brand.gray600"
         })
       },
-      // TODO: brand bg color problem on the projects page
-      Badge: {
-        variants: {
-          grey: (props) => ({
-            bg: props.colorMode == "dark" ? "brand.gray800" : "brand.gray900"
-          })
-        }
-      },
       Code: {
         baseStyle: (props) => ({
           width: "100%",
