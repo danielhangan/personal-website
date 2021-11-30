@@ -19,7 +19,7 @@ export const Footer = (props: FlexProps) => {
         as="footer"
         h={{base: '100%', md: '225px'}}
         w={{base: '100%', md:'3xl'}}
-        mt={8}
+        my={8}
         alignItems="flex-start"
         justifyContent="space-between"
       >
