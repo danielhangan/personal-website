@@ -1,19 +1,40 @@
 import { Hero } from '../components/Hero'
 import { Blog } from '../components/Blog'
 import { Main } from '../components/Main'
+import { GetStaticProps } from 'next'
+import { getFeaturedPostsData } from '../../lib/posts'
 
 import ContainerLayout from '../layouts/Container'
 import {
-  Flex
+  Flex,
+  Box,
+  Heading
 } from '@chakra-ui/react'
 
-const Index = () => (
-  <ContainerLayout>
-    <Main>
-      <Hero />
-      <Blog home/>
-    </Main>
-  </ContainerLayout>
-)
+export default function Index (
+  {
+    featuredposts
+  } : {
+    featuredposts: object
+  }) {
+  return (
+    <ContainerLayout>
+      <Main>
+        <Hero />
+        <Blog posts={featuredposts} home />
+      </Main>
+    </ContainerLayout>
+  )
+}
 
-export default Index
+
+export const getStaticProps: GetStaticProps = async () => {
+  const featuredposts = await getFeaturedPostsData()
+
+  return {
+    props: {
+      featuredposts: featuredposts.posts,
+    },
+    revalidate: 60 * 60
+  }
+}

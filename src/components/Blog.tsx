@@ -3,23 +3,49 @@ import React from "react";
 import ContainerLayout from "../layouts/Container";
 import { Main } from '../components/Main'
 import { Date } from '../components/Date'
+import { FeaturedPost } from "./FeaturedPost";
 import {
     Heading,
     Box,
     Text,
     Flex,
     VStack,
+    HStack,
+    Stack,
     Link as ChakraLink
 } from '@chakra-ui/react'
 import Link from 'next/link'
 
+import { ArrowRight } from "@emotion-icons/bootstrap";
+
 
 export const Blog = ({ posts, home } : { posts?: any, home? : React.ReactNode }) => {
-
     return (
         <>
         {home? (
-            <Text>3 posts</Text>
+            <Flex 
+                direction="column"
+                w={{base: "100%", md: "3xl"}}
+                pl={3}
+                spacing={12}
+            >
+                <Heading>Featured Posts</Heading>
+                <Stack
+                    direction={["column", "row"]}
+                    my={4}
+                    spacing={2}
+                >
+                    {posts.map((post) => (
+                        <FeaturedPost key={post.slug} post={post} />
+                    ))}
+                </Stack>
+                    <Link href="/posts">
+                        <Flex alignItems="center">
+                            <Text _hover={{color: 'white'}} pr={1}>Read more</Text>
+                            <ArrowRight size="18px" />
+                        </Flex>
+                    </Link>
+            </Flex>
         ) : (
         <ContainerLayout>
 

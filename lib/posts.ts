@@ -43,6 +43,28 @@ export async function getAllPostsData() {
     return data
 }
 
+export async function getFeaturedPostsData() {
+    
+    const query = gql`
+        query FeaturedPosts {
+            posts (where: {featured: true}) {
+                slug
+                title
+                date
+            }
+        }
+    `
+    const data = await client.request(query)
+
+    if (!data) {
+        return {
+            notFound: true,
+        }
+    }
+
+    return data
+}
+
 export async function getPostData(slug: string) {
     
     const query = gql`
