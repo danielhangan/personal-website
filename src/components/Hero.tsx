@@ -12,12 +12,14 @@ export const Hero = ({
   name,
   job_title,
   company,
-  description
+  description,
+  languages
  }: { 
   name: string, 
   job_title: string,
   company: string,
-  description: string
+  description: string,
+  languages: string
   }) => {
 
     return (
@@ -35,7 +37,7 @@ export const Hero = ({
             </Text>
             <Text>
               {description}
-            </Text> 
+            </Text>
           </VStack>
         </Box>
         <Image
@@ -52,7 +54,8 @@ export const Hero = ({
 
 Hero.defaultProps = {
   name: 'Daniel Hangan',
-  job_title: 'Python Engineer',
+  job_title: 'Software Engineer',
   company: 'Radicle Insights',
-  description: 'Helping companies build better data apps. Passioante about Blockchain, AI, IoT and Robotics.'
+  description: 'Helping companies build better data apps. Passioante about Blockchain, AI, IoT and Robotics.',
+  languages: "Python, TypeScript"
 }

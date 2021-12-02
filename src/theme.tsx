@@ -43,6 +43,16 @@ const theme = extendTheme(
           color: props.colorMode == "dark" ? "brand.gray300" : "brand.gray600"
         })
       },
+      Link: {
+        baseStyle: (props) => ({
+          color: props.colorMode == "dark" ? "brand.gray300" : "brand.gray600",
+          _hover: {
+            color: props.colorMode == "dark" ? "brand.gray100" : "brand.gray900",
+            textDecorationLine: "none"
+          },
+          cursor: 'pointer'
+        })
+      },
       Button: {
         variants: {
           ghost: (props) => ({

@@ -10,7 +10,6 @@ import {
     Text,
     Flex,
     VStack,
-    HStack,
     Stack,
     Link as ChakraLink
 } from '@chakra-ui/react'
@@ -41,8 +40,9 @@ export const Blog = ({ posts, home } : { posts?: any, home? : React.ReactNode })
                 </Stack>
                     <Link href="/posts">
                         <Flex alignItems="center">
-                            <Text _hover={{color: 'white'}} pr={1}>Read more</Text>
-                            <ArrowRight size="18px" />
+                                <ChakraLink>
+                                    Read more <ArrowRight size="18px" />
+                                </ChakraLink>
                         </Flex>
                     </Link>
             </Flex>
