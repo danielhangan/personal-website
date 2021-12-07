@@ -41,11 +41,11 @@ export async function getAllPostsData() {
     return data
 }
 
-export async function getFeaturedPostsData() {
+export async function getLatestPostsData() {
     
     const query = gql`
         query FeaturedPosts {
-            posts (where: {featured: true}) {
+            posts (where: {featured: true}, orderBy: createdAt_DESC, first: 3) {
                 slug
                 title
                 date

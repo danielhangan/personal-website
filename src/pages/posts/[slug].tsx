@@ -7,7 +7,9 @@ import {
     Heading,
     Text,
     Box,
-    Code
+    Code,
+    Stack,
+    Divider
 } from '@chakra-ui/react'
 import PostLayout from '../../layouts/Post';
 
@@ -38,12 +40,14 @@ export default function Post({ post } : {post: IPost}) {
             return <Heading as="h2" size="lg" mt={12} mb={1}>{children}</Heading>
         },
         blockquote: props => {
+            // TODO: adjust fontWeight and colorScheme for devider
             const { children } = props;
-            return <Code pt={6} mb={4} mx={2} borderRadius="10px">
-                    <Text px={4}>
-                            {children}
-                    </Text>
-                    </Code>
+            return <Code my={4}>
+                    <Stack direction="row" p={4}>
+                        <Divider orientation="vertical" />
+                        <Text>{children}</Text>
+                    </Stack>
+            </Code>
         }
     }
 

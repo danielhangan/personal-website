@@ -2,7 +2,8 @@ import { Hero } from '../components/Hero'
 import { Blog } from '../components/Blog'
 import { Main } from '../components/Main'
 import { GetStaticProps } from 'next'
-import { getFeaturedPostsData } from '../../lib/posts'
+import { getLatestPostsData } from '../../lib/posts'
+import { ProjectsMain } from '../components/ProjectsMain'
 
 import ContainerLayout from '../layouts/Container'
 import {
@@ -25,6 +26,7 @@ export default function Index (
       <Main>
         <Hero />
         <Blog posts={featuredposts} home />
+        <ProjectsMain projects={latestprojects} />
       </Main>
     </ContainerLayout>
   )
@@ -32,7 +34,7 @@ export default function Index (
 
 
 export const getStaticProps: GetStaticProps = async () => {
-  const featuredposts = await getFeaturedPostsData()
+  const featuredposts = await getLatestPostsData()
   const latestprojects = await getAllProjectsData()
 
   return {

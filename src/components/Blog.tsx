@@ -28,7 +28,7 @@ export const Blog = ({ posts, home } : { posts?: any, home? : React.ReactNode })
                 pl={3}
                 spacing={12}
             >
-                <Heading>Featured Posts</Heading>
+                <Heading>Latest Posts</Heading>
                 <Stack
                     direction={["column", "row"]}
                     my={4}
