@@ -48,8 +48,8 @@ export const Footer = (props: FlexProps) => {
             <Link href="https://twitter.com/hangandaniel" passHref>
               <ChakraLink>Twitter</ChakraLink>
             </Link>
-            <Link href="https://danielhangan.medium.com/" passHref>
-              <ChakraLink>Medium</ChakraLink>
+            <Link href="https://linkedin.com/in/danielhangan/" passHref>
+              <ChakraLink>LinkedIn</ChakraLink>
             </Link>
             <Link href="https://github.com/danielhangan" passHref>
               <ChakraLink>Github</ChakraLink>
