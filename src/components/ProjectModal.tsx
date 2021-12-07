@@ -47,12 +47,13 @@ export const ProjectModal = ({project} : {project : any}) => {
                 <ModalCloseButton />
                 <ModalBody>
                     <Box>
-                        <Image src={project.imageUrl} alt={project.slug} borderRadius="md" />
+                        <Image src={project.images.url} alt={project.slug} borderRadius="md" />
     
                         {/* TECHNOLOGIES */}
                         <Box flexDirection="row" my={2}>
                             {project.stack.split(",").map((technology) => (
                                     <Badge 
+                                        key={technology}
                                         m={1}
                                         ml={0}
                                         p={1.5}
@@ -69,7 +70,7 @@ export const ProjectModal = ({project} : {project : any}) => {
                         {/* DESCRIPTION */}
                         <Text mb={2}>
                             {/* TODO: convert markup to Chakra UI */}
-                            {project.description}
+                            {project.longDescription}
                         </Text>
     
                         {/* PROJECT LINK */}

@@ -10,12 +10,15 @@ import {
   Box,
   Heading
 } from '@chakra-ui/react'
+import { getAllProjectsData } from '../../lib/projects'
 
 export default function Index (
   {
-    featuredposts
+    featuredposts,
+    latestprojects
   } : {
     featuredposts: object
+    latestprojects: object
   }) {
   return (
     <ContainerLayout>
@@ -30,10 +33,12 @@ export default function Index (
 
 export const getStaticProps: GetStaticProps = async () => {
   const featuredposts = await getFeaturedPostsData()
+  const latestprojects = await getAllProjectsData()
 
   return {
     props: {
       featuredposts: featuredposts.posts,
+      latestprojects: latestprojects.projects
     },
     revalidate: 60 * 60
   }

@@ -1,6 +1,4 @@
 import { GraphQLClient, gql } from "graphql-request";
-
-// Not sure if I need these yet
 import { serialize } from 'next-mdx-remote/serialize';
 
 
