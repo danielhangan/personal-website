@@ -6,11 +6,6 @@ import { getLatestPostsData } from '../../lib/posts'
 import { ProjectsMain } from '../components/ProjectsMain'
 
 import ContainerLayout from '../layouts/Container'
-import {
-  Flex,
-  Box,
-  Heading
-} from '@chakra-ui/react'
 import { getAllProjectsData } from '../../lib/projects'
 
 export default function Index (

@@ -30,6 +30,8 @@ export const FeaturedPost = ({ post } : {
                 w="sm"
                 bgGradient="conic-gradient(red, yellow, lime, aqua, blue, magenta, red) 1"
                 borderRadius="5px"
+                transition="all .2s ease-in-out"
+                _hover={{transform: "scale(1.05)"}}
             >
             <VStack
                 alignItems="flex-start"

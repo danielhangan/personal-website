@@ -4,17 +4,19 @@ Built with **TypeScript, Nextjs and Chakra UI**
 
 - [x] main page featured projects
 - [x] Footer Medium to Linkedin
-- [ ] Blog search bar
 - [x] Connect projects to GraphCMS
-- [ ] ChakraLink hover effect (increase size)
+- [x] ChakraLink hover effect (increase size)
+- [ ] New Fonts
+- [ ] Button outline color change in default theme
+- [ ] Dark / Light mode switch button change
+- [ ] Main page resize Latest Post Box
 - [ ] Add all projects
 - [ ] Add all blog posts
+- [ ] Blog Code section highlight
+- [ ] Blog search bar
 - [ ] Resume
 - [ ] Small screen left corner button placement
-- [ ] Dark / Light mode switch button change
 - [ ] About page
 - [ ] Contact Page
-- [ ] Blog Code section highlight
-- [ ] New Fonts
 - [ ] Verify domain
 - [ ] SEO
