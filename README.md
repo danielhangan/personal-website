@@ -6,6 +6,9 @@ Built with **TypeScript, Nextjs and Chakra UI**
 - [x] Footer Medium to Linkedin
 - [x] Connect projects to GraphCMS
 - [x] ChakraLink hover effect (increase size)
+- [ ] Remove projects from website
+- [ ] Redesign Hero component
+- [ ] Connnect to danielhangan.com domain
 - [ ] New Fonts
 - [ ] Button outline color change in default theme
 - [ ] Dark / Light mode switch button change
