@@ -11,11 +11,11 @@ Built with **TypeScript, Nextjs and Chakra UI**
 - [x] New Fonts
 - [x] Button outline color change in default theme
 - [x] Dark / Light mode switch button change
+- [ ] Navigation Show Active page
 - [ ] Move to MDX
 - [ ] Blog code box highlight
 - [ ] Main page resize Latest Post Box
 - [ ] Add all blog posts
-- [ ] Blog Code section highlight
 - [ ] Blog search bar
 - [ ] Resume
 - [x] Small screen left corner button placement

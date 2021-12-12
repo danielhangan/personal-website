@@ -45,14 +45,6 @@ export const Naviagation = () => {
                             </Button>
                         </Link>
 
-                        <Link href="/projects">
-                            <Button
-                            
-                                >
-                                Projects
-                            </Button>
-                        </Link>
-
                         <Link href="/contact">
                             <Button
                                 aria-label="Contact"
@@ -123,18 +115,6 @@ export const Naviagation = () => {
                             my={2}
                         >
                             Posts
-                        </Button>
-                    </Link>
-
-                    <Link href="/projects">
-                        <Button
-                            w="95%"
-                            justifyContent="flex-start"
-                            aria-label="projects"
-                            p={2}
-                            my={2}
-                        >
-                            Projects
                         </Button>
                     </Link>
 
