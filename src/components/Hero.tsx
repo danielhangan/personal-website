@@ -127,7 +127,7 @@ Hero.defaultProps = {
     name: 'Daniel Hangan',
     job_title: "Python Software Engineer",
     company: 'Radicle Insights',
-    description: 'Heey. Great to see you here. I work in tech but I share anything that might help people grow, learn, become more mindful and healty.',
+    description: 'Heey. Great to see you here. I work in tech but I share anything that might help people grow, learn and become more mindful and healthy.',
     github: 'https://github.com/danielhangan',
     twitter: 'https://twitter.com/HanganDaniel'
 }
