@@ -6,8 +6,7 @@ Built with **TypeScript, Nextjs and Chakra UI**
 - [x] Footer Medium to Linkedin
 - [x] Connect projects to GraphCMS
 - [x] ChakraLink hover effect (increase size)
-- [ ] Redesign Hero component
-- [ ] Redesign Projects Page
+- [x] Redesign Hero component
 - [ ] Connnect to danielhangan.com domain
 - [ ] New Fonts
 - [ ] Button outline color change in default theme
@@ -15,13 +14,11 @@ Built with **TypeScript, Nextjs and Chakra UI**
 - [ ] Move to MDX
 - [ ] Blog code box highlight
 - [ ] Main page resize Latest Post Box
-- [ ] Add all projects
 - [ ] Add all blog posts
 - [ ] Blog Code section highlight
 - [ ] Blog search bar
 - [ ] Resume
-- [ ] Small screen left corner button placement
+- [x] Small screen left corner button placement
 - [ ] About page
 - [ ] Contact Page
-- [ ] Verify domain
 - [ ] SEO

@@ -20,17 +20,15 @@ export const Naviagation = () => {
     const { isOpen, onToggle } = useDisclosure()
 
     return (
-        <Flex w={{base:'100%', md:'3xl'}}>
-        {/* Desktop */}
-        {/* TODO: responsive Flex for IconButton (maybe from default theme) */}
-        <Flex 
-            w={{base: '100%', md:'3xl'}}
-            alignItems="center"
+        <Flex w="100%">
+        <HStack
+            w="100%"
+            alingItems="center"
             justifyContent="space-between"
             pt={4}
             pb={8}
         >
-                <Flex display={['none', 'none', 'flex', 'flex' ]} mt={2}>
+                <Flex display={['none', 'none', 'flex', 'flex' ]}>
                         <Link href="/">
                             <Button
                                 ml={0}
@@ -70,13 +68,12 @@ export const Naviagation = () => {
                         icon={<HamburgerIcon />}
                         display={['flex', 'flex', 'none', 'none']}
                         onClick={onToggle}
-                        mx="0px"
                         />
                     <Switch
                         isChecked={isDark}
                         onChange={toggleColorMode}
                         />
-            </Flex>
+            </HStack>
 
             {/* Mobile */}
             <Collapse in={isOpen} animateOpacity>
@@ -91,7 +88,7 @@ export const Naviagation = () => {
                 overflowY="auto"
                 flexDir="column"
             >
-                <Flex justify="flex-start" pl={3} mt={4}>
+                <Flex justify="flex-start" pl={4} mt={4}>
                     <IconButton
                         aria-label="Close Menu"
                         icon={

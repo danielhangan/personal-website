@@ -12,14 +12,11 @@ export const Footer = (props: FlexProps) => {
   
   return (
     <>
-      <Divider
-        w={{base: '100%', md:'3xl'}} 
-        my={8}
-        />
+      <Divider />
       <Flex 
         as="footer"
-        h={["md", "xs"]}
-        w={{base: '100%', md:'3xl'}}
+        h="full"
+        w={{base: '100%', md:'2xl'}}
         alignItems="flex-start"
         justifyContent="space-between"
       >

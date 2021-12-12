@@ -3,10 +3,8 @@ import { Blog } from '../components/Blog'
 import { Main } from '../components/Main'
 import { GetStaticProps } from 'next'
 import { getLatestPostsData } from '../../lib/posts'
-import { ProjectsMain } from '../components/ProjectsMain'
 
 import ContainerLayout from '../layouts/Container'
-import { getAllProjectsData } from '../../lib/projects'
 
 export default function Index (
   {
@@ -20,8 +18,7 @@ export default function Index (
     <ContainerLayout>
       <Main>
         <Hero />
-        <Blog posts={featuredposts} home />
-        <ProjectsMain projects={latestprojects} />
+        {/* <Blog posts={featuredposts} home /> */}
       </Main>
     </ContainerLayout>
   )
@@ -30,12 +27,10 @@ export default function Index (
 
 export const getStaticProps: GetStaticProps = async () => {
   const featuredposts = await getLatestPostsData()
-  const latestprojects = await getAllProjectsData()
 
   return {
     props: {
       featuredposts: featuredposts.posts,
-      latestprojects: latestprojects.projects
     },
     revalidate: 60 * 60
   }

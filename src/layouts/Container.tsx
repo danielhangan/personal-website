@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, useColorMode, FlexProps } from "@chakra-ui/react";
+import { Flex, VStack, useColorMode, FlexProps } from "@chakra-ui/react";
 
 import { Naviagation } from "../components/Navigation";
 import { Footer } from "../components/Footer";
@@ -20,13 +20,19 @@ export default function ContainerLayout({
             direction="column"
             alignItems="center"
             h="auto"
+            minH="1000px"
             px={6}
             bg={bgColor[colorMode]}
             color={color[colorMode]}
         >
+        <VStack 
+            w={{base: '100%', md:'2xl'}}
+            spacing={12}
+        >
             <Naviagation />
                 {children}
-            <Footer />
+            {/* <Footer /> */}
+        </VStack>
         </Flex>
     )
 }
