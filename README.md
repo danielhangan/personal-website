@@ -8,7 +8,7 @@ Built with **TypeScript, Nextjs and Chakra UI**
 - [x] ChakraLink hover effect (increase size)
 - [x] Redesign Hero component
 - [x] Connnect to danielhangan.com domain
-- [ ] New Fonts
+- [x] New Fonts
 - [ ] Button outline color change in default theme
 - [ ] Dark / Light mode switch button change
 - [ ] Move to MDX

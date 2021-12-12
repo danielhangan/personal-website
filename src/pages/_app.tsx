@@ -1,3 +1,6 @@
+import '@fontsource/montserrat'
+import '@fontsource/karla'
+
 import { ChakraProvider } from '@chakra-ui/react'
 
 import theme from '../theme'

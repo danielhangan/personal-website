@@ -1,8 +1,6 @@
 import { extendTheme, withDefaultSize, withDefaultColorScheme, withDefaultVariant } from '@chakra-ui/react'
 import { createBreakpoints } from '@chakra-ui/theme-tools'
 
-const fonts = { mono: `'Menlo', monospace` }
-
 const breakpoints = createBreakpoints({
   sm: '40em',
   md: '52em',
@@ -26,7 +24,10 @@ const theme = extendTheme(
         gray900: '#171923'
       }
     },
-    fonts,
+    fonts: {
+      heading: 'Montserrat',
+      body: 'Karla'
+    },
     breakpoints,
     components: {
       Text: {
@@ -35,6 +36,11 @@ const theme = extendTheme(
           fontSize: "16px",
           color: props.colorMode == "dark" ? "brand.gray300" : "brand.gray600"
         })
+      },
+      Heading: {
+        baseStyle: {
+          letterSpacing: "2px"
+        }
       },
       Code: {
         baseStyle: (props) => ({
