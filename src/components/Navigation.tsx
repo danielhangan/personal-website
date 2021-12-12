@@ -20,9 +20,9 @@ export const Naviagation = () => {
     const { isOpen, onToggle } = useDisclosure()
 
     return (
-        <Flex w="100%">
+        <Flex w={{base: '100%', md:"700px"}}>
         <HStack
-            w="100%"
+            w={{base: '100%', md: '90%'}}
             alignItems="center"
             justifyContent="space-between"
             pt={4}
@@ -31,8 +31,6 @@ export const Naviagation = () => {
                 <Flex display={['none', 'none', 'flex', 'flex' ]}>
                         <Link href="/">
                             <Button
-                                ml={0}
-                                pl={3}
                                 aria-label="Home"
                                 >
                                 Home
@@ -43,13 +41,13 @@ export const Naviagation = () => {
                             <Button
                                 aria-label="Blog"
                                 >
-                                Blog
+                                Posts
                             </Button>
                         </Link>
 
                         <Link href="/projects">
                             <Button
-                                aria-label="Projects"
+                            
                                 >
                                 Projects
                             </Button>
@@ -65,10 +63,11 @@ export const Naviagation = () => {
                 </Flex> 
                     <IconButton
                         aria-label="Open Menu"
+                        ml="0 !important"
                         icon={<HamburgerIcon />}
                         display={['flex', 'flex', 'none', 'none']}
                         onClick={onToggle}
-                        />
+                    />
                     <Switch
                         isChecked={isDark}
                         onChange={toggleColorMode}
@@ -123,7 +122,7 @@ export const Naviagation = () => {
                             p={2} 
                             my={2}
                         >
-                            Blog
+                            Posts
                         </Button>
                     </Link>
 

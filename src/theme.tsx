@@ -31,7 +31,7 @@ const theme = extendTheme(
     breakpoints,
     components: {
       Text: {
-        baseStyle: (props) => ({
+        baseStyle: (props: any) => ({
           fontWeight: "lighter",
           fontSize: "16px",
           color: props.colorMode == "dark" ? "brand.gray300" : "brand.gray600"
@@ -43,14 +43,14 @@ const theme = extendTheme(
         }
       },
       Code: {
-        baseStyle: (props) => ({
+        baseStyle: (props: any) => ({
           width: "100%",
           p: "8px",
           color: props.colorMode == "dark" ? "brand.gray300" : "brand.gray600"
         })
       },
       Link: {
-        baseStyle: (props) => ({
+        baseStyle: (props: any) => ({
           color: props.colorMode == "dark" ? "brand.gray300" : "brand.gray600",
           _hover: {
             color: props.colorMode == "dark" ? "brand.gray100" : "brand.gray900",
@@ -60,19 +60,32 @@ const theme = extendTheme(
         })
       },
       Button: {
+        baseStyle: {
+          _focus: {
+            boxShadow: 'none'
+          }
+        },
         variants: {
-          ghost: (props) => ({
+          ghost: (props: any) => ({
             color: props.colorMode == "dark" ? "brand.gray300" : "brand.gray600",
             fontWeight: "lighter",
-            mx: "8px",
             _hover: {
               bg: props.colorMode == "dark" ? "brand.gray600" : "brand.gray300"
             },
           })
         },
         defaultProps: {
-          size:"md",
+          size:"lg",
           variant: "ghost"
+        }
+      },
+      Switch: {
+        baseStyle: {
+          track: {
+            _focus: {
+              boxShadow: 'none'
+            }
+          }
         }
       }
     }

@@ -9,8 +9,8 @@ Built with **TypeScript, Nextjs and Chakra UI**
 - [x] Redesign Hero component
 - [x] Connnect to danielhangan.com domain
 - [x] New Fonts
-- [ ] Button outline color change in default theme
-- [ ] Dark / Light mode switch button change
+- [x] Button outline color change in default theme
+- [x] Dark / Light mode switch button change
 - [ ] Move to MDX
 - [ ] Blog code box highlight
 - [ ] Main page resize Latest Post Box
