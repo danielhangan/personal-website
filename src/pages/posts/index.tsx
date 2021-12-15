@@ -1,20 +1,20 @@
 import { GetStaticProps } from 'next'
-import { getAllPostsData } from '../../../lib/posts'
 import React from 'react'
+import { getAllFilesFrontMatter } from '../../../lib/mdx'
 import { Blog } from '../../components/Blog'
 
 
 export default function AllPosts(
     { 
-        allposts,
+        posts,
         home 
     } : { 
-        allposts: any, 
+        posts: any, 
         home: React.ReactNode
     }) {
     return (
         <>
-            <Blog posts={allposts} />
+            <Blog posts={posts} />
         </>
     )
 }
@@ -22,12 +22,10 @@ export default function AllPosts(
 
 
 export const getStaticProps: GetStaticProps = async () => {
-    const allposts = await getAllPostsData()
+    const posts = await getAllFilesFrontMatter('blog')
 
     return {
-        props: { 
-            allposts: allposts.posts,
-        },
+        props: { posts },
         revalidate: 60 * 60
     }
 }

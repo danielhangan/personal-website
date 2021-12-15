@@ -22,7 +22,7 @@ export const Naviagation = () => {
     return (
         <Flex w={{base: '100%', md:"700px"}}>
         <HStack
-            w={{base: '100%', md: '90%'}}
+            w="100%"
             alignItems="center"
             justifyContent="space-between"
             pt={4}

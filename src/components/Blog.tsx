@@ -24,8 +24,7 @@ export const Blog = ({ posts, home } : { posts?: any, home? : React.ReactNode })
         {home? (
             <Flex 
                 direction="column"
-                w={{base: "100%", md: "3xl"}}
-                pl={3}
+                w={{base: "100%", md: "2xl"}}
                 spacing={12}
             >
                 <Heading>Latest Posts</Heading>
@@ -51,9 +50,8 @@ export const Blog = ({ posts, home } : { posts?: any, home? : React.ReactNode })
 
             <Main>
                 <VStack
-                    w={{base:'100%', md:'3xl'}}
+                    w={{base:'100%', md:'2xl'}}
                     alignItems="flex-start"
-                    pl={3}
                     spacing={12}
                     >
                     <Box>
@@ -68,7 +66,7 @@ export const Blog = ({ posts, home } : { posts?: any, home? : React.ReactNode })
 
                     <Box w="100%">
                         <Heading size="xl" mb={4}>All Posts</Heading>
-                        {posts.map((post) => (
+                        {posts.map((post: any) => (
                             <Box key={post.id} mb={6}>
                                     <Flex
                                         direction={{base: 'column', md:'row'}}
@@ -84,7 +82,7 @@ export const Blog = ({ posts, home } : { posts?: any, home? : React.ReactNode })
                                         </Text>
                                     </Flex>
 
-                                    <Text>{post.description}</Text>
+                                    <Text>{post.summary}</Text>
                             </Box>
                         ))} 
                     </Box>  
