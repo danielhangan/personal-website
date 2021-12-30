@@ -3,7 +3,11 @@ import matter from 'gray-matter'
 import mdxPrism from 'mdx-prism'
 import path from 'path'
 import readingTime from 'reading-time'
-// import renderToString from 'next-mdx-remote/render-to-string'
+
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import rehypeSlug from 'rehype-slug'
+import rehypeCodeTitles from 'rehype-code-titles'
+
 
 import MDXComponents from '../src/components/MDXComponents'
 import { serialize } from 'next-mdx-remote/serialize'
@@ -20,7 +24,24 @@ export async function getFileBySlug(type, slug) {
         : fs.readFileSync(path.join(root, 'data', `${type}.mdx`), 'utf8')
 
     const { data, content } = matter(source)
-    const mdxSource = await serialize(content, { scope: data })
+    const mdxSource = await serialize(content, { 
+        scope: data,
+        mdxOptions: {
+            rehypePlugins: [
+                mdxPrism,
+                rehypeSlug,
+                rehypeCodeTitles,
+                [
+                    rehypeAutolinkHeadings,
+                    {
+                        properties: {
+                            className: ['anchor']
+                        }
+                    }
+                ]
+            ],
+        }
+    })
 
     return {    
         mdxSource,
