@@ -12,13 +12,14 @@ Built with **TypeScript, Nextjs and Chakra UI**
 - [x] Button outline color change in default theme
 - [x] Dark / Light mode switch button change
 - [ ] Navigation Show Active page
-- [ ] Move to MDX
-- [ ] Blog code box highlight
+- [x] Move to MDX
+- [x] Blog code box highlight
 - [ ] Main page resize Latest Post Box
-- [ ] Add all blog posts
+- [x] Add all blog posts
 - [ ] Blog search bar
 - [ ] Resume
 - [x] Small screen left corner button placement
 - [ ] About page
 - [ ] Contact Page
 - [ ] SEO
+- [ ] Projects
