@@ -27,8 +27,8 @@ export const FeaturedPost = ({ post } : {
     return (
         <Link href={`/posts/${post.slug}`}>
             <ChakraLink
-                w="sm"
-                bgGradient="conic-gradient(red, yellow, lime, aqua, blue, magenta, red) 1"
+                w={["100%", "lg"]}
+                bgGradient="linear-gradient(to right, #de6262, #ffb88c)"
                 borderRadius="5px"
                 transition="all .2s ease-in-out"
                 _hover={{transform: "scale(1.05)"}}
@@ -36,7 +36,7 @@ export const FeaturedPost = ({ post } : {
             <VStack
                 alignItems="flex-start"
                 bg={bgColor[colorMode]}
-                h={["150px", "250px"]}
+                h="200px"
                 p={4}
                 m={1}
             >

@@ -19,7 +19,6 @@ Built with **TypeScript, Nextjs and Chakra UI**
 - [x] Add all blog posts
 - [ ] Blog search bar
 - [x] Small screen left corner button placement
-- [ ] About page
 - [ ] Contact Page (Resume)
 - [ ] SEO
 - [ ] Projects

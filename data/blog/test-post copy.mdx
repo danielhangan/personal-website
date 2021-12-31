@@ -1,0 +1,26 @@
+---
+title: "Markdown/MDX with Next.js"
+date: "2020-06-21"
+summary: "hello world 2"
+author: "Daniel Hangan"
+---
+
+# Hello World
+
+hope this is working fine.
+
+```tsx
+export default class App extends NextApp {
+  render() {
+    const { Component, pageProps } = this.props;
+    return (
+      <ThemeProvider theme={theme}>
+        <ColorModeProvider value="light">
+          <CSSReset />
+          <Component {...pageProps} />
+        </ColorModeProvider>
+      </ThemeProvider>
+    );
+  }
+}
+```
