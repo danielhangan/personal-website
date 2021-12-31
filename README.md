@@ -14,12 +14,12 @@ Built with **TypeScript, Nextjs and Chakra UI**
 - [x] Navigation Show Active page
 - [x] Move to MDX
 - [x] Blog code box highlight
-- [ ] Main page resize Latest Post Box
+- [ ] Main page Latest Post Box
+- [ ] Footer
 - [x] Add all blog posts
 - [ ] Blog search bar
-- [ ] Resume
 - [x] Small screen left corner button placement
 - [ ] About page
-- [ ] Contact Page
+- [ ] Contact Page (Resume)
 - [ ] SEO
 - [ ] Projects
