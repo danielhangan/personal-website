@@ -9,7 +9,18 @@ author: "Daniel Hangan"
 
 hope this is working fine.
 
-```python
-def main_func():
-    return "hello world"
+```tsx
+export default class App extends NextApp {
+  render() {
+    const { Component, pageProps } = this.props;
+    return (
+      <ThemeProvider theme={theme}>
+        <ColorModeProvider value="light">
+          <CSSReset />
+          <Component {...pageProps} />
+        </ColorModeProvider>
+      </ThemeProvider>
+    );
+  }
+}
 ```

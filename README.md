@@ -11,7 +11,7 @@ Built with **TypeScript, Nextjs and Chakra UI**
 - [x] New Fonts
 - [x] Button outline color change in default theme
 - [x] Dark / Light mode switch button change
-- [ ] Navigation Show Active page
+- [x] Navigation Show Active page
 - [x] Move to MDX
 - [x] Blog code box highlight
 - [ ] Main page resize Latest Post Box

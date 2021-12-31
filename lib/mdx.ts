@@ -6,10 +6,7 @@ import readingTime from 'reading-time'
 
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeSlug from 'rehype-slug'
-import rehypeCodeTitles from 'rehype-code-titles'
 
-
-import MDXComponents from '../src/components/MDXComponents'
 import { serialize } from 'next-mdx-remote/serialize'
 
 const root = process.cwd()
@@ -17,6 +14,7 @@ const root = process.cwd()
 export async function getFiles(type) {
     return fs.readdirSync(path.join(root, 'data', type))
 }
+
 
 export async function getFileBySlug(type, slug) {
     const source = slug
@@ -30,7 +28,6 @@ export async function getFileBySlug(type, slug) {
             rehypePlugins: [
                 mdxPrism,
                 rehypeSlug,
-                rehypeCodeTitles,
                 [
                     rehypeAutolinkHeadings,
                     {

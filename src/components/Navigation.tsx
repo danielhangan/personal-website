@@ -12,12 +12,18 @@ import {
  } from '@chakra-ui/react'
 import Link from 'next/link'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
+import { useRouter } from 'next/router'
 
 export const Naviagation = () => {
     const { colorMode, toggleColorMode } = useColorMode()
     const isDark = colorMode === 'dark'
     const menuColor = { light: 'gray.50', dark: 'brand.gray900'}
     const { isOpen, onToggle } = useDisclosure()
+    const router = useRouter()
+
+    let currentPath = router.route.split("/")[1]
+
+    currentPath === "" ? currentPath = "home" : currentPath
 
     return (
         <Flex w={{base: '100%', md:"700px"}}>
@@ -31,6 +37,7 @@ export const Naviagation = () => {
                 <Flex display={['none', 'none', 'flex', 'flex' ]}>
                         <Link href="/">
                             <Button
+                                fontWeight={currentPath === "home" ? "bold" : "normal"}
                                 aria-label="Home"
                                 >
                                 Home
@@ -39,6 +46,7 @@ export const Naviagation = () => {
 
                         <Link href="/posts">
                             <Button
+                                fontWeight={currentPath === "posts" ? "bold" : "normal"}
                                 aria-label="Blog"
                                 >
                                 Posts
@@ -47,6 +55,7 @@ export const Naviagation = () => {
 
                         <Link href="/contact">
                             <Button
+                                fontWeight={currentPath === "contact" ? "bold" : "normal"}
                                 aria-label="Contact"
                                 >
                                 Contact
