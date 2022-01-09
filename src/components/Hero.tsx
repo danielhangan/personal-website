@@ -55,7 +55,6 @@ export const Hero = ({
                     boxSize="100px"
                     borderRadius="full"
                     alt="Daniel Hangan"
-                    fallback={<Spinner />}
                 />
             </Box>
 

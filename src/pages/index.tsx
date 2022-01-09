@@ -6,6 +6,7 @@ import { getAllFilesFrontMatter } from '../../lib/mdx'
 
 import ContainerLayout from '../layouts/Container'
 import { FeaturedPost } from '../components/FeaturedPost'
+import { Footer } from '../components/Footer'
 
 export default function Index ({posts} : {posts:any}) {
 

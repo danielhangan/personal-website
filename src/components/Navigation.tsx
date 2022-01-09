@@ -52,15 +52,6 @@ export const Naviagation = () => {
                                 Posts
                             </Button>
                         </Link>
-
-                        <Link href="/contact">
-                            <Button
-                                fontWeight={currentPath === "contact" ? "bold" : "normal"}
-                                aria-label="Contact"
-                                >
-                                Contact
-                            </Button>
-                        </Link>
                 </Flex> 
                     <IconButton
                         aria-label="Open Menu"
@@ -126,19 +117,6 @@ export const Naviagation = () => {
                             Posts
                         </Button>
                     </Link>
-
-                    <Link href="/contact">
-                        <Button
-                            w="95%"
-                            justifyContent="flex-start"
-                            aria-label="Contact"
-                            p={2}
-                            my={2}
-                        >
-                            Contact
-                        </Button>
-                    </Link>
-
                 </Flex> 
             </Flex>
             </Collapse>

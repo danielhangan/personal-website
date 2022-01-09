@@ -19,13 +19,14 @@ export default function ContainerLayout({
         <Flex
             direction="column"
             alignItems="center"
-            h="auto"
-            minH="1000px"
+            h="100%"
+            minH="950px"
             px={6}
             bg={bgColor[colorMode]}
             color={color[colorMode]}
         >
         <VStack 
+            h="100%"
             w={{base: '100%', md:'2xl'}}
             spacing={12}
         >
