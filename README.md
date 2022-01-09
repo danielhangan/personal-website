@@ -15,7 +15,7 @@ Built with **TypeScript, Nextjs and Chakra UI**
 - [x] Move to MDX
 - [x] Blog code box highlight
 - [x] Image thumbnail when loading
-- [ ] Main page Latest Post Box
+- [x] Main page Latest Post Box
 - [ ] Footer
 - [x] Add all blog posts
 - [ ] Blog search bar

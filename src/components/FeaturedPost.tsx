@@ -31,7 +31,7 @@ export const FeaturedPost = ({ post } : {
                 bgGradient="linear-gradient(to right, #de6262, #ffb88c)"
                 borderRadius="5px"
                 transition="all .2s ease-in-out"
-                _hover={{transform: "scale(1.05)"}}
+                _hover={{transform: "scale(1.015)"}}
             >
             <VStack
                 alignItems="flex-start"
