@@ -6,6 +6,7 @@ import {
     Box,
     Flex,
     Image,
+    Spinner,
     Link as ChakraLink,
     useColorMode 
 } from '@chakra-ui/react'
@@ -53,6 +54,8 @@ export const Hero = ({
                     src="/images/profile.jpeg"
                     boxSize="100px"
                     borderRadius="full"
+                    alt="Daniel Hangan"
+                    fallback={<Spinner />}
                 />
             </Box>
 
