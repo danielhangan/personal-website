@@ -11,9 +11,11 @@ import {
   Image,
   Flex,
   Box,
-  Avatar
+  Avatar,
+  Link as ChakraLink
 } from '@chakra-ui/react'
 
+import { ArrowLeft } from "emotion-icons/bootstrap"
 
 export default function PostLayout({
     children,
@@ -98,6 +100,11 @@ export default function PostLayout({
                 </VStack>
             </Flex>
             {children}
+        <Link href="/posts">
+            <ChakraLink py={4}>
+                <ArrowLeft size="20px" /> All Posts
+            </ChakraLink>
+        </Link>
         </Main>
     </ContainerLayout>
     </>
