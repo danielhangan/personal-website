@@ -20,6 +20,7 @@ Built with **TypeScript, Nextjs and Chakra UI**
 - [x] Small screen left corner button placement
 - [ ] SEO
 - [ ] Footer
+- [ ] Notion as CMS
 - [ ] Images to MDX
 - [ ] Blog search bar
 - [ ] Projects
