@@ -18,6 +18,9 @@ Built with **TypeScript, Nextjs and Chakra UI**
 - [x] Main page Latest Post Box
 - [x] Add all blog posts
 - [x] Small screen left corner button placement
+- [x] Analytics
+- [ ] Resume
+- [ ] Icon Dark Mode Switch
 - [ ] SEO
 - [ ] Footer
 - [ ] Notion as CMS

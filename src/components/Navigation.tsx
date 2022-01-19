@@ -13,6 +13,7 @@ import {
 import Link from 'next/link'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 import { useRouter } from 'next/router'
+import DarkModeSwitch from './DarkModeSwitch'
 
 export const Naviagation = () => {
     const { colorMode, toggleColorMode } = useColorMode()
@@ -60,10 +61,7 @@ export const Naviagation = () => {
                         display={['flex', 'flex', 'none', 'none']}
                         onClick={onToggle}
                     />
-                    <Switch
-                        isChecked={isDark}
-                        onChange={toggleColorMode}
-                        />
+                    <DarkModeSwitch />
             </HStack>
 
             {/* Mobile */}
