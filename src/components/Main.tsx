@@ -6,7 +6,7 @@ export const Main = (props: StackProps, children: React.ReactNode) => (
     w={{base:'100%', md:'2xl'}}
     alignItems="flex-start"
     pl={3}
-    minH="lg"
+    minH="2xl"
     spacing={12}
     {...props}
   />

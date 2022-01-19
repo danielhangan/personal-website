@@ -20,7 +20,6 @@ export default function ContainerLayout({
             direction="column"
             alignItems="center"
             h="100%"
-            minH="950px"
             px={6}
             bg={bgColor[colorMode]}
             color={color[colorMode]}
@@ -32,7 +31,7 @@ export default function ContainerLayout({
         >
             <Naviagation />
                 {children}
-            {/* <Footer /> */}
+            <Footer />
         </VStack>
         </Flex>
     )

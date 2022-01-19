@@ -20,9 +20,8 @@ Built with **TypeScript, Nextjs and Chakra UI**
 - [x] Small screen left corner button placement
 - [x] Analytics
 - [ ] Resume
-- [ ] Icon Dark Mode Switch
 - [ ] SEO
-- [ ] Footer
+- [x] Footer
 - [ ] Notion as CMS
 - [ ] Images to MDX
 - [ ] Blog search bar

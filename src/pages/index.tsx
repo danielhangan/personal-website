@@ -1,13 +1,12 @@
+import { Flex } from '@chakra-ui/react'
 import Head from 'next/head'
 import { Hero } from '../components/Hero'
 import { Main } from '../components/Main'
 import { GetStaticProps } from 'next'
-
 import { getAllFilesFrontMatter } from '../../lib/mdx'
-
-import ContainerLayout from '../layouts/Container'
 import { FeaturedPost } from '../components/FeaturedPost'
 import { Footer } from '../components/Footer'
+import ContainerLayout from '../layouts/Container'
 
 export default function Index ({posts} : {posts:any}) {
 
@@ -18,15 +17,15 @@ export default function Index ({posts} : {posts:any}) {
     return bDate - aDate
   })
   return (
-    <ContainerLayout>
-      <Head>
-        <script async src="https://cdn.splitbee.io/sb.js"></script>
-      </Head>
-      <Main>
-        <Hero />
-        <FeaturedPost post={lastpost[0]} />
-      </Main>
-    </ContainerLayout>
+      <ContainerLayout>
+        <Head>
+          <script async src="https://cdn.splitbee.io/sb.js"></script>
+        </Head>
+        <Main>
+          <Hero />
+          <FeaturedPost post={lastpost[0]} />
+        </Main>
+      </ContainerLayout>
   )
 }
 
