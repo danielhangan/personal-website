@@ -19,7 +19,7 @@ Built with **TypeScript, Nextjs and Chakra UI**
 - [x] Add all blog posts
 - [x] Small screen left corner button placement
 - [x] Analytics
-- [ ] Resume
+- [x] Resume
 - [ ] SEO
 - [x] Footer
 - [ ] Notion as CMS

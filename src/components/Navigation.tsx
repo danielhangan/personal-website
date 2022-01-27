@@ -53,6 +53,14 @@ export const Naviagation = () => {
                                 Posts
                             </Button>
                         </Link>
+
+                        <Link href="https://danielhangan.notion.site/Daniel-Hangan-Software-Engineer-c72811ac4c3f4b739c5d3e167046086b">
+                            <Button
+                                aria-label="Resume"
+                                >
+                                Resume
+                            </Button>
+                        </Link>
                 </Flex> 
                     <IconButton
                         aria-label="Open Menu"
@@ -113,6 +121,17 @@ export const Naviagation = () => {
                             my={2}
                         >
                             Posts
+                        </Button>
+                    </Link>
+                    <Link href="https://danielhangan.notion.site/Daniel-Hangan-Software-Engineer-c72811ac4c3f4b739c5d3e167046086b">
+                        <Button
+                            w="95%"
+                            justifyContent="flex-start"
+                            aria-label="Resume"
+                            p={2}
+                            my={2}
+                            >
+                            Resume
                         </Button>
                     </Link>
                 </Flex> 
