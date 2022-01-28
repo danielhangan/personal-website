@@ -26,3 +26,4 @@ Built with **TypeScript, Nextjs and Chakra UI**
 - [ ] Images to MDX
 - [ ] Blog search bar
 - [ ] Projects
+- [ ] Chakra Semantic Tokens
