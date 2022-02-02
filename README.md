@@ -20,10 +20,11 @@ Built with **TypeScript, Nextjs and Chakra UI**
 - [x] Small screen left corner button placement
 - [x] Analytics
 - [x] Resume
-- [ ] SEO
 - [x] Footer
+- [ ] SEO
 - [ ] Notion as CMS
+- [ ] Move to TailwindCSS https://leerob.io/blog/tailwind
 - [ ] Images to MDX
 - [ ] Blog search bar
 - [ ] Projects
-- [ ] Chakra Semantic Tokens
+- [ ] Newsletter using getrevue.co. Release weekly.

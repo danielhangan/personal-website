@@ -129,7 +129,7 @@ Hero.defaultProps = {
     name: 'Daniel Hangan',
     job_title: "Python Software Engineer",
     company: 'Radicle Insights',
-    description: 'Hey there. I'm a Software Engineer based in Lisbon, Portugal. Even though I have a background in Business and Data Analytics, programming has always sparked my intelligence and creativity. Developing software and application for the web has become my drive and my career.',
+    description: "Hey there. I'm a Software Engineer based in Lisbon, Portugal. Even though I have a background in Business and Data Analytics, programming has always sparked my intelligence and creativity. Developing software and application for the web has become my drive and my career.",
     github: 'https://github.com/danielhangan',
     twitter: 'https://twitter.com/HanganDaniel'
 }
