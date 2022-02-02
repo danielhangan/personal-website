@@ -37,7 +37,7 @@ export const Blog = ({ posts, home } : { posts?: any, home? : React.ReactNode })
                         <FeaturedPost key={post.slug} post={post} />
                     ))}
                 </Stack>
-                    <Link href="/posts">
+                    <Link href="/posts" passHref>
                         <Flex alignItems="center">
                                 <ChakraLink>
                                     Read more <ArrowRight size="18px" />

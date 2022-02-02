@@ -100,7 +100,7 @@ export default function PostLayout({
                 </VStack>
             </Flex>
             {children}
-        <Link href="/posts">
+        <Link href="/posts" passHref>
             <ChakraLink py={4}>
                 <ArrowLeft size="20px" /> All Posts
             </ChakraLink>

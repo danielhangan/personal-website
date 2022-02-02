@@ -36,7 +36,7 @@ export const Naviagation = () => {
             pb={8}
         >
                 <Flex display={['none', 'none', 'flex', 'flex' ]}>
-                        <Link href="/">
+                        <Link href="/" passHref>
                             <Button
                                 fontWeight={currentPath === "home" ? "bold" : "normal"}
                                 aria-label="Home"
@@ -45,7 +45,7 @@ export const Naviagation = () => {
                             </Button>
                         </Link>
 
-                        <Link href="/posts">
+                        <Link href="/posts" passHref>
                             <Button
                                 fontWeight={currentPath === "posts" ? "bold" : "normal"}
                                 aria-label="Blog"
@@ -54,7 +54,7 @@ export const Naviagation = () => {
                             </Button>
                         </Link>
 
-                        <Link href="https://danielhangan.notion.site/Daniel-Hangan-Software-Engineer-c72811ac4c3f4b739c5d3e167046086b">
+                        <Link href="https://danielhangan.notion.site/Daniel-Hangan-Software-Engineer-c72811ac4c3f4b739c5d3e167046086b" passHref>
                             <Button
                                 aria-label="Resume"
                                 >
@@ -100,7 +100,7 @@ export const Naviagation = () => {
                     align="flex-start"
                     p={4}
                 >
-                    <Link href="/">
+                    <Link href="/" passHref>
                         <Button
                             w="95%"
                             justifyContent="flex-start"
@@ -112,7 +112,7 @@ export const Naviagation = () => {
                         </Button>
                     </Link>
 
-                    <Link href="/posts">
+                    <Link href="/posts" passHref>
                         <Button
                             w="95%"
                             justifyContent="flex-start"
@@ -123,7 +123,7 @@ export const Naviagation = () => {
                             Posts
                         </Button>
                     </Link>
-                    <Link href="https://danielhangan.notion.site/Daniel-Hangan-Software-Engineer-c72811ac4c3f4b739c5d3e167046086b">
+                    <Link href="https://danielhangan.notion.site/Daniel-Hangan-Software-Engineer-c72811ac4c3f4b739c5d3e167046086b" passHref>
                         <Button
                             w="95%"
                             justifyContent="flex-start"

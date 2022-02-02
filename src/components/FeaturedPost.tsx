@@ -25,7 +25,7 @@ export const FeaturedPost = ({ post } : {
 
 
     return (
-        <Link href={`/posts/${post.slug}`}>
+        <Link href={`/posts/${post.slug}`} passHref>
             <ChakraLink
                 w={["100%", "lg"]}
                 bgGradient="linear-gradient(to right, #de6262, #ffb88c)"
