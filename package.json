@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "postbuild": "node ./scripts/generate-sitemap.mjs",
+    "postbuild": "node ./scripts/generate-sitemap.mts",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
