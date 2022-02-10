@@ -36,7 +36,6 @@ export const Hero = ({
         <VStack 
             alignItems="flex-start"
             spacing={12}
-            pt={12}
         >
         <Flex 
             direction={['column', 'row']} 

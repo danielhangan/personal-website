@@ -34,7 +34,7 @@ export default function PostLayout({
     description: string,
     frontMatter?: any
 }) {
-    console.log(frontMatter)
+
     return (
     <>
         <Head>
@@ -113,7 +113,7 @@ export default function PostLayout({
 
 PostLayout.defaultProps = {
   name: 'Daniel Hangan',
-  job_title: 'Python Engineer',
+  job_title: 'Python Software Engineer',
   company: 'Radicle Insights',
-  description: 'Helping companies build better data apps. Passioante about Blockchain, AI, IoT and Robotics.'
+  description: 'Hey there. Welcome to my digital garden. By day I am probably busy building the next startup market intelligence tech @ Radicle Insights, and by night learning and contributing.'
 }

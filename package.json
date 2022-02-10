@@ -33,6 +33,7 @@
     "mdx-prism": "^0.3.4",
     "next": "^12.0.2",
     "next-mdx-remote": "^3.0.8",
+    "next-seo": "^5.1.0",
     "nextjs": "0.0.3",
     "prettier": "^2.5.1",
     "react": "^17.0.2",

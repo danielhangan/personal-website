@@ -6,11 +6,11 @@ import {
     Link,
     Text,
     Divider,
+    Image,
     useColorMode,
 } from '@chakra-ui/react';
 import { jsx } from '@emotion/react'
 import NextLink from 'next/link'
-import Image from 'next/image'
 
 const CustomLink = (props) => {
     const { colorMode } = useColorMode()
@@ -131,7 +131,7 @@ const MDXComponents = {
     ol: (props) => <Box as="ol" pt={2} pl={4} ml={2} {...props} />,
     li: (props) => <Box as="li" pb={1} {...props} />,
     blockquote: Quote,
-    img: (props) => <Image {...props} alt="image" />
+    img: (props) => <Image {...props} boxSize="fit" pt={2} alt={props.alt} />
 }
 
 export { CustomLink }

@@ -67,7 +67,7 @@ export const Blog = ({ posts, home } : { posts?: any, home? : React.ReactNode })
                     <Box w="100%">
                         <Heading size="xl" mb={4}>All Posts</Heading>
                         {posts.map((post: any) => (
-                            <Box key={post.id} mb={6}>
+                            <Box key={post.slug} mb={6}>
                                     <Flex
                                         direction={{base: 'column', md:'row'}}
                                         mb={2}
