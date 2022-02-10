@@ -22,9 +22,8 @@ Built with **TypeScript, Nextjs and Chakra UI**
 - [x] Resume
 - [x] Footer
 - [ ] SEO Continue when you move to Notion CMS -> https://leerob.io/blog/nextjs-sitemap-robots#dynamic-sitemaps
-- [ ] Notion as CMS
+- [x] Images to MDX
 - [ ] Move to TailwindCSS https://leerob.io/blog/tailwind
-- [ ] Images to MDX
 - [ ] Blog search bar
-- [ ] Projects
+- [ ] Projects Section
 - [ ] Newsletter using getrevue.co. Release weekly.

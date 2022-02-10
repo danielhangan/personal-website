@@ -18,9 +18,6 @@ export default function Index ({posts} : {posts:any}) {
   })
   return (
       <ContainerLayout>
-        <Head>
-          <script async src="https://cdn.splitbee.io/sb.js"></script>
-        </Head>
         <Main>
           <Hero />
           <FeaturedPost post={lastpost[0]} />
