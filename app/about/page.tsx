@@ -22,7 +22,7 @@ export default function About() {
             { /* Page title */}
             <h1 className="mb-5 h1 font-aspekta">Hi. I'm Daniel <span className="relative inline-flex text-sky-500 before:absolute before:inset-0 before:bg-sky-200 dark:before:bg-sky-500 before:opacity-30 before:-z-10 before:-rotate-2 before:translate-y-1/4">@danielhangan</span> Hangan 🤟</h1>
             <div className='flex items-center justify-center w-full'>
-              <Image className="w-fit rounded-xl" src={ProfileImg} width={692} height={390} alt="About" />
+              <Image className="w-96 rounded-xl" src={ProfileImg} width={692} height={390} alt="About" />
             </div>
             { /* Page content */}
             <div className="space-y-8 text-slate-500 dark:text-slate-400">
