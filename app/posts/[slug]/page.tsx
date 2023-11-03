@@ -112,8 +112,6 @@ export default async function SinglePost({ params }: {
         <div className="space-y-6">
           <WidgetNewsletter />
           <WidgetSponsor />
-          {/* Temporary fix - ref: https://github.com/vercel/next.js/issues/42292#issuecomment-1298459024 */}
-          {/* @ts-expect-error Server Component */}
           <WidgetPosts />
         </div>
       </aside>
