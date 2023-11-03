@@ -12,6 +12,7 @@
     "@types/node": "^20.8.2",
     "@types/react": "^18.2.24",
     "@types/react-dom": "^18.2.9",
+    "@vercel/analytics": "^1.1.1",
     "contentlayer": "^0.3.2",
     "date-fns": "^2.30.0",
     "next": "^13.5.4",
