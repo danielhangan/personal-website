@@ -51,14 +51,11 @@ export default function RootLayout({
               { /* Main content */}
               <main className="px-6 overflow-hidden grow">
                 <div className="w-full h-full max-w-[1072px] mx-auto flex flex-col">
-
                   <Header />
 
                   {children}
                   <Analytics />
-
                   <Footer />
-
                 </div>
               </main>
 
