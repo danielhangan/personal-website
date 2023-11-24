@@ -29,16 +29,13 @@ export default function About() {
               <div className="space-y-4">
                 <h2 className="h3 font-aspekta text-slate-800 dark:text-slate-100">Short Bio</h2>
                 <p>
-                I'm a seasoned software engineer and internet entrepreneur with a strong track record of developing innovative solutions to complex problems in the technology industry. I have a keen interest in pioneering state-of-the-art data-driven technologies and am committed to driving systemic change that promotes global unity and connectivity.
-                </p>
-                <p>
-                  While there isn't a Wikipedia page about me (sorry folks!), a media bio is available below.
+                  I'm a seasoned software engineer and internet entrepreneur with a strong track record of developing innovative solutions to complex problems in the technology industry. I have a keen interest in pioneering state-of-the-art data-driven technologies and am committed to driving systemic change that promotes global unity and connectivity.
                 </p>
               </div>
               <div className="space-y-4">
                 <h2 className="h3 font-aspekta text-slate-800 dark:text-slate-100">Career</h2>
                 <p>
-                  In my role as a Lead Software Engineer for <a className="font-medium text-sky-500 hover:underline" href="https://radicleinsights.com/">Radicle Insights</a>, I , I spearheaded the development and management of Radicle's core technology infrastructure, services, and products, resulting in a robust and efficient system.
+                  In my role as a Lead Software Engineer for <a className="font-medium text-sky-500 hover:underline" href="https://radicleinsights.com/">Radicle Insights</a>, I spearheaded the development and management of Radicle's core technology infrastructure, services, and products, resulting in a robust and efficient system.
                 </p>
                 <p>
                   I engineered an internal full-stack application that empowered 25 research analysts to query 3 million companies, execute data science scripts, and access third-party API data, enhancing productivity. I streamlined data pipeline integration of 3 sources into the data warehouse, ensuring seamless access to up-to-date information. I also pioneered a semantic search engine using Qdrant and Hugging Face ML models, leading to a 10x improvement in speed and accuracy in identifying relevant companies, significantly augmenting research efficiency.
@@ -47,7 +44,7 @@ export default function About() {
                   As the Co-Founder & CTO of <strong className="font-medium text-slate-800 dark:text-slate-100">Interlinked</strong>, I orchestrated the architecture and construction of a data-driven investment platform for Seed and Series A Investors, aggregating and parsing data from multiple sources to enable data-driven investment decisions. I innovated two powerful search engines using Meilisearch (Full-text) and Qdrant (Similarity Search), enhancing the usability and efficiency of the platform. I also automated data pipeline integration of 3 data sources into the data warehouse, ensuring seamless access to up-to-date information.
                 </p>
               </div>
-              
+
               <Experience />
 
               <div className="space-y-4">
